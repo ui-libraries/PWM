@@ -1,0 +1,355 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>FlipCard examples</title>
+        <link rel="stylesheet" type="text/css" href="flipcard.css" />
+        <link rel="stylesheet" type="text/css" href="app.css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+        <script src="flipcard.js"></script>
+        <script src="app.js"></script>
+        <script src="prettify/run_prettify.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="title"><h1>FlipCard.js</h1></div>
+        </div>
+        <div class="container group1">
+            <div class="card-container dual">
+                <div class="card">
+                    <div class="front">
+                        <img src="./images/stanford_400X200.png" />
+                    </div>
+                    <div class="back orange">
+                        <h3>Stanford Main Quad</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="smallspacer"></div>
+            <div class="smallspacer"></div>
+            <div class="action">
+                <div class="description">FlipCard.js implements card filp animation with javascript, css3 and html5. It's fully customizable with either html5 "data-*" attributes or options in javascript. It also supports all modern browsers which including chrome 16+, firefox 12+, safari 5+, opera 12+, and IE10+. </div>
+                <div class="smallspacer"></div>
+                <div class="description">Examples are shown as follows to demostrate that what you can do with FlipCard.js and how flexible you get to use it. </div>
+                <div class="smallspacer"></div>
+                <div class="clear"></div>
+                <div class="action-left">
+                    <div class="buttonwrapper bw1">
+                        <div class="color orange"></div>
+                        <div class="label">Direction</div>
+                        <div class="button button1">Left</div>
+                        <div class="button button2">Right</div>
+                        <div class="button button3">Top</div>
+                        <div class="button button4">Bottom</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buttonwrapper bw2">
+                        <div class="color yellow"></div>
+                        <div class="label">Speed</div>
+                        <div class="button button1">100ms</div>
+                        <div class="button button2">500ms</div>
+                        <div class="button button3">1s</div>
+                        <div class="button button4">2s</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buttonwrapper bw3">
+                        <div class="color gray"></div>
+                        <div class="label">Timing function</div>
+                        <div class="button button1">ease</div>
+                        <div class="button button2">ease-in</div>
+                        <div class="button button3">ease-out-cubic</div>
+                        <div class="button button4">ease-in-expo</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buttonwrapper bw4">
+                        <div class="color green"></div>
+                        <div class="label">Event</div>
+                        <div class="button button1">on flipping</div>
+                        <div class="button button2">on flipped</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buttonwrapper bw5">
+                        <div class="color blue"></div>
+                        <div class="label">Autoflip</div>
+                        <div class="button button1">Start at 0ms, delay: 1s</div>
+                        <div class="button button2">Start at 0ms, delay: 3s</div>
+                        <div class="button button3">Start at 500ms, delay: 2s </div>
+                        <div class="button button4">Stop</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="action-right">
+
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="container group2">
+            <div class="subtitle">Auto flipping cards all at once</div>
+            <div class="clear"></div>
+            <div class="card-container" data-autoflip="true" data-autoflipstart="1500ms" data-autoflipdelay="2500ms" data-direction="rl" data-speed="600ms" data-timingfunction="ease-in-out">
+                <div class="card">
+                    <div class="front">
+                        <img src="./images/road_200X200.png" />
+                    </div>
+                    <div class="back blue">
+                        <h3>Freeway 280</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container dual" data-autoflip="true" data-autoflipstart="1500ms" data-autoflipdelay="2500ms" data-direction="bt" data-speed="600ms" data-timingfunction="ease-in-out">
+                <div class="card">
+                    <div class="front">
+                        <img src="./images/half-moon-bay_400X200.png" />
+                    </div>
+                    <div class="back gray">
+                        <h3>Half moon bay</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container" data-autoflip="true" data-autoflipstart="1500ms" data-autoflipdelay="2500ms" data-direction="lr" data-speed="600ms" data-timingfunction="ease-in-out">
+                <div class="card">
+                    <div class="back">
+                        <img src="./images/lake_200X200.png" />
+                    </div>
+                    <div class="front green">
+                        <h3>Lake</h3>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card-container dual" data-autoflip="true" data-autoflipstart="1500ms" data-autoflipdelay="2500ms" data-direction="lr" data-speed="600ms" data-timingfunction="ease-in-out">
+                <div class="card">
+                    <div class="back">
+                        <img src="./images/Stanford_400X200.png" />
+                    </div>
+                    <div class="front orange">
+                        <h3>Stanford Main Quad</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container" data-autoflip="true" data-autoflipstart="1500ms" data-autoflipdelay="2500ms" data-direction="rl" data-speed="600ms" data-timingfunction="ease-in-out">
+                <div class="card">
+                    <div class="front">
+                        <img src="./images/lake_200X200.png" />
+                    </div>
+                    <div class="back green">
+                        <h3>Lake</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container" data-autoflip="true" data-autoflipstart="1500ms" data-autoflipdelay="2500ms" data-direction="tb" data-speed="600ms" data-timingfunction="ease-in-out">
+                <div class="card">
+                    <div class="back">
+                        <img src="./images/road_200X200.png" />
+                    </div>
+                    <div class="front blue">
+                        <h3>Freeway 280</h3>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <div class="card-container" data-autoflip="true" data-autoflipstart="1500ms" data-autoflipdelay="2500ms" data-direction="bt" data-speed="600ms" data-timingfunction="ease-in-out">
+                <div class="card">
+                    <div class="back">
+                        <img src="./images/lake_200X200.png" />
+                    </div>
+                    <div class="front green">
+                        <h3>Lake</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container dual" data-autoflip="true" data-autoflipstart="1500ms" data-autoflipdelay="2500ms" data-direction="tb" data-speed="600ms" data-timingfunction="ease-in-out">
+                <div class="card">
+                    <div class="front">
+                        <img src="./images/road_400X200.png" />
+                    </div>
+                    <div class="back blue">
+                        <h3>Freeway 280</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container " data-autoflip="true" data-autoflipstart="1500ms" data-autoflipdelay="2500ms" data-direction="lr" data-speed="600ms" data-timingfunction="ease-in-out">
+                <div class="card">
+                    <div class="front">
+                        <img src="./images/Stanford_200X200.png" />
+                    </div>
+                    <div class="back orange">
+                        <h3>Stanford Main Quad</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="smallspacer"></div>
+            <div class="smallspacer"></div>
+            <div class="action">
+                <div class="description">A group of cards flip together. You can stop and restart them in different configurations with flipcard.js manipulation API easily. Hit the following buttons to play it.</div>
+                <div class="smallspacer"></div>
+                <div class="clear"></div>
+                <div class="action-left">
+                    <div class="buttonwrapper bw1">
+                        <div class="color yellow"></div>
+                        <div class="label">Autoflip</div>
+                        <div class="button button1">Start at 0ms, delay: 1s</div>
+                        <div class="button button2">Start at 0ms, delay: 3s</div>
+                        <div class="button button3">Start at 500ms, delay: 2s </div>
+                        <div class="button button4">Stop</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="container group10" id="code">
+            <div class="subtitle">Let's code</div>
+            <div class="clear"></div>
+            <div class="action">
+                <div class="description">First, you need have references to flipcard.css, flipcard.js and jquery 1.7+</div>
+                <div class="smallspacer"></div>
+                <pre class="prettyprint">
+                    <div>&lt;link rel="stylesheet" type="text/css" href="flipcard.css" /&gt;</div>
+                    <div>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"&gt;&lt;/script&gt;</div>
+                    <div>&lt;script src="flipcard.js"&gt;&lt;/script&gt;</div>
+                </pre>
+            </div>
+
+            <div class="action">
+                <div class="description">Second, some HTML markup</div>
+                <div class="smallspacer"></div>
+                <pre class="prettyprint">
+                    <div>&lt;div class="card-container"&gt;</div>
+                    <div>   &lt;div class="front"&gt;</div>
+                    <div>       Front</div>
+                    <div>   &lt;/div&gt;</div>
+                    <div>   &lt;div class="back"&gt;</div>
+                    <div>       Back</div>
+                    <div>   &lt;/div&gt;</div>
+                    <div>&lt;/div&gt;</div>
+                </pre>
+            </div>
+            <div class="action">
+                <div class="description">Last, let's flip it in javascript!</div>
+                <div class="smallspacer"></div>
+                <pre class="prettyprint">
+                    <div>//that's it. Very simple and straightforward.</div>
+                    <div>//You can have two ways to customize the flip effect including direction, speed, timingfunction, autoflip and so on</div>
+                    <div>//The first way is to specify an options when calling flip(options) function, see details below</div>
+                    <div>//The second way is to specify "data-" html attributes in html markup</div>
+                    <div>$(".card-container").flip();</div>
+                </pre>
+            </div>
+            <div class="action">
+                <div class="description">Details on options</div>
+                <div class="smallspacer"></div>
+                <pre class="prettyprint">
+                    <div></div>
+                    <div>//you can specify an options when calling flip() function</div>
+                    <div>var options = {</div>
+                    <div>       direction: 'lr', //values: 'lr' (left to right), 'tb'(top to bottom), 'rl' and 'bt'</div>
+                    <div>       speed: '500ms', //specify animation duration</div>
+                    <div>       timingfunction: 'ease', //built-in timing function list (see it below) or customized cubic-beizer</div>
+                    <div>       onflipping: function(dir, transDir) //this event will be triggered before animation</div>
+                    <div>       {</div>
+                    <div>           //dir is direction e.g. 'lr', 'tb'</div>
+                    <div>           //transDir means transforming from front to back (value: 'fb') or back to front (value: 'bf')</div>
+                    <div>           console.log("onflipping event"); </div>
+                    <div>       },</div>
+                    <div>       onflipped: function(dir, transDir) //this event will be triggered after animation</div>
+                    <div>       {</div>
+                    <div>           //dir is direction e.g. 'lr', 'tb'</div>
+                    <div>           //transDir means transforming from front to back (value: 'fb') or back to front (value: 'bf')</div>
+                    <div>           console.log("onflipped event"); </div>
+                    <div>       }</div>
+                    <div>}</div>
+                    <div>$(".card-container").flip(options);</div>
+
+                    <div></div>
+                    <div>//or you can specify "data-" html attributes in html markup, e.g.</div>
+                    <div>&lt;div class="card-container" data-direction="lr" data-speed="500ms" data-timingfunction="ease"&gt;</div>
+                    <div>   &lt;div class="front"&gt;</div>
+                    <div>       Front</div>
+                    <div>   &lt;/div&gt;</div>
+                    <div>   &lt;div class="back"&gt;</div>
+                    <div>       Back</div>
+                    <div>   &lt;/div&gt;</div>
+                    <div>&lt;/div&gt;</div>
+                </pre>
+            </div>
+
+            <div class="action">
+                <div class="description">How does auto flipping work?</div>
+                <div class="smallspacer"></div>
+                <pre class="prettyprint">
+                    <div></div>
+                    <div>//if you want to have auto flip effect, you can do:</div>
+                    <div>var options = {</div>
+                    <div>       autoflip: "true",</div>
+                    <div>       autoflipstart: '500ms', //indicates how long to wait to start this autoflip</div>
+                    <div>       autoflipdelay: '3s', //indicates how long to wait between two consective flips</div>
+                    <div>}</div>
+                    <div></div>
+                    <div>//or you can specify "data-" html attributes in html markup, e.g.</div>
+                    <div>&lt;div class="card-container" data-autoflip="true" data-autoflipstart="500ms" data-autoflipdelay="3s"&gt;</div>
+                    <div>   &lt;div class="front"&gt;</div>
+                    <div>       Front</div>
+                    <div>   &lt;/div&gt;</div>
+                    <div>   &lt;div class="back"&gt;</div>
+                    <div>       Back</div>
+                    <div>   &lt;/div&gt;</div>
+                    <div>&lt;/div&gt;</div>
+                </pre>
+                
+                <div class="smallspacer"></div>
+                <div class="description">Let's say you want to stop auto flip, how can we do that?</div>
+                <div class="smallspacer"></div>
+                <pre class="prettyprint">
+                    <div></div>
+                    <div>//stop auto flip. Just give a "stopautoflip" command in flip() function</div>
+                    <div>$(".card-container").flip("stopautoflip")</div>
+                    <div> </div>
+                </pre>
+            </div>
+            <div class="action">
+                <div class="description">Built-in timing function full list</div>
+                <div class="smallspacer"></div>
+                <pre class="prettyprint">
+                    <div>'ease'</div>
+                    <div>'ease-in'</div>
+                    <div>'ease-out'</div>
+                    <div>'ease-in-out'</div>
+                    <div>'linear'</div>
+
+                    <div>'ease-in-quad'</div>
+                    <div>'ease-in-cubic'</div>
+                    <div>'ease-in-quart'</div>
+                    <div>'ease-in-quint'</div>
+                    <div>'ease-in-sine'</div>
+                    <div>'ease-in-expo'</div>
+                    <div>'ease-in-circ'</div>
+
+                    <div>'ease-out-quad'</div>
+                    <div>'ease-out-cubic'</div>
+                    <div>'ease-out-quart'</div>
+                    <div>'ease-out-quint'</div>
+                    <div>'ease-out-sine'</div>
+                    <div>'ease-out-expo'</div>
+                    <div>'ease-out-circ'</div>
+
+                    <div>'ease-in-out-quad'</div>
+                    <div>'ease-in-out-cubic'</div>
+                    <div>'ease-in-out-quart'</div>
+                    <div>'ease-in-out-quint'</div>
+                    <div>'ease-in-out-sine'</div>
+                    <div>'ease-in-out-expo'</div>
+                    <div>'ease-in-out-circ'</div>
+                </pre>
+            </div>
+        </div>
+
+    </body>
+</html>

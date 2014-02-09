@@ -1,0 +1,20 @@
+TIGER/Line Shapefile, 2008,  state, Wisconsin, County and Equivalent
+
+The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database.  The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts.  However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation.
+
+Attributes:
+NAME: Current county name - 
+FUNCSTAT: Current functional status - 
+METDIVFP: Current metropolitan division code - 
+MTFCC: MAF/TIGER feature class code - 
+CLASSFP: Current Federal Information Processing Standards (FIPS) 55 class code - 
+LSAD: Current legal/statistical area description code for county - 
+COUNTYNS: Current county ANSI code - 
+CBSAFP: Current metropolitan statistical area/micropolitan statistical area code - 
+STATEFP: Current state Federal Information Processing Standards (FIPS) code - 
+CSAFP: Current combined statistical area code - 
+COUNTYFP: Current county Federal Information Processing Standards (FIPS) code - 
+NAMELSAD: Current name and the translated legal/statistical area description for county - 
+CNTYIDFP: Current county identifier; a concatenation of current state Federal Information Processing Standards (FIPS) code and county FIPS code - 
+
+exported on Fri Nov 30 18:24:27 -0500 2012

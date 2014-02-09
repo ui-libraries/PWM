@@ -1,0 +1,2 @@
+<!-- quickflip head -->
+	<script type="text/javascript" src="<?php echo resource_url('jquery/jquery.quickflip.min.js')?>"></script>

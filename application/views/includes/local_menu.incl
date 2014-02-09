@@ -1,0 +1,9 @@
+<script>
+    $(document).ready(function() {
+        $( "#level1_menu_<?php echo $local_menu_id ?>" ).menu();
+    });
+
+</script>
+<style>
+    .ui-menu { width: 150px; }
+</style>
