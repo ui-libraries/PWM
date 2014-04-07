@@ -7,7 +7,7 @@
     <?php 
     	echo link_tag('resources/css/style.css');
         include ('includes/jquery_head.incl');
-		include('includes/local_menu.incl');         
+ 		include('includes/local_menu.incl');          
      ?>
 </head>
 <body onload='init();'>
@@ -17,6 +17,7 @@
 
 <!--page content -->	
 <div id="contentwrapper" style="background:#666666;">
+
 
     <div id="leftcolumn">
         <div class="innertube">

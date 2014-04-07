@@ -25,13 +25,13 @@ class Home extends CI_Controller {
 		parent::__construct();
 		$this->load->model('menus');
 		$this->load->model('popups');
-		$this->view_data['main_menu'] = $this->menus->build_menu(1);
+		$this->view_data['main_menu'] = $this->menus->build_menu(100);
 	}
 
 	public function index()
 	{
 		//$data['main_menu'] = $this->main_menu;
-		$this->local_menu_id = 2;
+		$this->local_menu_id = 200;
 		$this->view_data['local_menu_id'] = $this->local_menu_id;
 		$this->view_data['local_menu'] = $this->menus->build_menu($this->local_menu_id);
 		$this->load->view('v_home', $this->view_data);

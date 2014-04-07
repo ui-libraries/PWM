@@ -44,7 +44,7 @@
     
     function init() {
 		//add a leaflet map
-	    map = L.map('map_container').setView([41.97908142956606, -91.66657447814941], 15);
+	    map = L.map('map_container').setView([41.974997740488874, -91.66723966598511], 15);
 
 		// add an OpenStreetMap tile layer
 		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -59,7 +59,7 @@
  				echo $bindpopup[$i]; 
 			}
 		?>
-		/* map.on('click', function(e) { alert("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng) }) */ 
+		/*map.on('click', function(e) { alert("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng) }) */
     }
 
 

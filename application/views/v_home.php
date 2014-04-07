@@ -28,7 +28,9 @@
         <div id="contentcolumn">
             <div class="innertube">
                 <div id='map_container'></div>
+                <i>&nbsp;&nbsp;click+drag to reposition map, shift+click+drag to zoom, Click "Home" to reset view</i>
             </div>
+            <!-- todo: create css style rule for the following instruction -->
         </div>
     </div>
     
