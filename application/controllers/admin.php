@@ -42,6 +42,9 @@ class Admin extends CI_Controller {
             $data['status_msg'] = $this->popups->load_csv();
             $this->load->view('v_status', $data);        
         }
+         public function getinfo() {
+	         $this->load->view('v_getinfo');
+         }
         
 }
 
