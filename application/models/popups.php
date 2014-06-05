@@ -131,7 +131,7 @@ class Popups extends CI_model {
 			$size = getimagesize("$imgaddress");
 			$buildstr.= "<div style=\"height:".$size[1]."px;\">";
 			$buildstr.="<img src=\"".image_url($row->imageurl)."\" >"; 
-			$buildstr .= "</div";		
+			$buildstr .= "</div>";		
 		}
 		if (!empty($row->body)) {$buildstr.="<div class=\"popuptxt\">".$row->body."</div>";}
 		if (!empty($row->buttontxt)&&!empty($row->buttonurl)) {
