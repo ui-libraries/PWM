@@ -380,6 +380,9 @@ way to fit your requirements.
 	background-color:#fcd6a7;
 /*    width: 160px;*/
 }
+.top_menu active {
+	color: #4d6aca ;
+}
 
 /* make the second level visible when hover on first level list OR link */
 .top_menu ul li:hover ul,.top_menu ul a:hover ul {
@@ -404,6 +407,10 @@ way to fit your requirements.
 .active {
 	font-style:italic;
 	font-weight:700;
+	color: #4d6aca !important;
+}
+.heading {
+	font-weight: bold !important;
 }
 
 /*

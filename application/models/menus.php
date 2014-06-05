@@ -42,7 +42,7 @@ class Menus extends CI_model {
         $menustr = "<div id = '".$query->row()->css_id."' class = '".$query->row()->css_class."'>\n";
         $menustr .= "<ul id = 'level1_menu_".$menu_id."'>\n ";
         
-        $sql = "SELECT id, menu_item_text, url, target, css_class 
+        $sql = "SELECT id, menu_id, menu_item_text, url, target, css_class 
                 FROM menu_items 
                 WHERE menu_id = $menu_id 
                     AND child_of IS NULL 
@@ -52,20 +52,22 @@ class Menus extends CI_model {
             foreach ($level1->result() as $level1_row){
                 $menustr .= $this->build_menu_item($level1_row);
                 
-                $sql = "SELECT id, menu_item_text, url, target, css_class 
+                $sql = "SELECT id, menu_id, menu_item_text, url, target, css_class 
                         FROM menu_items 
                         WHERE menu_id = $menu_id
-                            AND child_of = ".$level1_row->id."ORDER BY sort ASC" ;
+                            AND child_of = ".$level1_row->id.
+                        "ORDER BY sort ASC" ;
                 $level2 = $this->db->query($sql);
                 
                 if ($level2->num_rows() > 0){
                     $menustr .= "<ul id = 'level2_menu_".$level1_row->id."'>\n ";
                     foreach ($level2->result() as $level2_row){
                         $menustr .= $this->build_menu_item($level2_row);
-                        $sql = "SELECT id, menu_item_text, url, target, css_class 
+                        $sql = "SELECT id, menu_id, menu_item_text, url, target, css_class 
                                 FROM menu_items 
                                 WHERE menu_id = $menu_id
-                                    AND child_of = ".$level2_row->id."ORDER BY sort ASC" ;
+                                    AND child_of = ".$level2_row->id.
+                                "ORDER BY sort ASC" ;
                         $level3 = $this->db->query($sql);
                         if ($level3->num_rows() > 0){
                             $menustr .= "<ul id = 'level3_menu_".$level2_row->id."'>\n ";
@@ -98,11 +100,17 @@ class Menus extends CI_model {
 		else {
 			$url=$row->url;
 			}
-    	
         $menu_item = "<li ";
-        $menu_item .= !empty($row->css_class) ? "class = '".$row->css_class."' " : '';
+	    $menu_item .= "class = ";
+        if($row->menu_id!=100){
+			$menu_item .= !empty($row->css_class) ? "{$row->css_class}" : "ui-state-disabled";
+        } else {
+			$menu_item .= !empty($row->css_class) ? "{$row->css_class}" : "disabled";
+		}
+		
         $menu_item .= ">";
         $menu_item .= "<a href='".$url."' ";
+        $menu_item .= !empty($row->css_class)? "class = '".$row->css_class."' " : '';
         $menu_item .= !empty($row->target)? "target = '".$row->target."' " : '';
         $menu_item .= ">".$row->menu_item_text."</a>\n";
         return $menu_item;
