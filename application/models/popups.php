@@ -124,7 +124,14 @@ class Popups extends CI_model {
 		$buildstr = "";
 		if (!empty($row->title)) {$buildstr.= "<h3>".$row->title."</h3>";}
 		if (!empty($row->subtitle)) {$buildstr.= "<h4>".$row->subtitle."</h4>";}
-		if (!empty($row->imageurl)) {$buildstr.="<img src=\"".image_url($row->imageurl)."\" >"; }
+
+//todo: found that if you wrap the image in an empty DIV with the height set to the corresponding height of the image, then autopan works as desired.
+		if (!empty($row->imageurl)) {
+			$size = getimagesize(image_url($row->imageurl));
+			$buildstr.= "<div style=\"height:".$size[1]."px;\">";
+			$buildstr.="<img src=\"".image_url($row->imageurl)."\" >"; 
+			$buildstr .= "</div";		
+		}
 		if (!empty($row->body)) {$buildstr.="<div class=\"popuptxt\">".$row->body."</div>";}
 		if (!empty($row->buttontxt)&&!empty($row->buttonurl)) {
 			$buildstr .= "<p><a class=\"popupbutton\" href=\"".site_url($row->buttonurl)."\">".$row->buttontxt."</a></p>";
