@@ -128,7 +128,7 @@ class Popups extends CI_model {
 //todo: found that if you wrap the image in an empty DIV with the height set to the corresponding height of the image, then autopan works as desired.
 		if (!empty($row->imageurl)) {
 			$imgaddress=image_url($row->imageurl);
-			$size = getimagesize($imgaddress);
+			$size = getimagesize("$imgaddress");
 			$buildstr.= "<div style=\"height:".$size[1]."px;\">";
 			$buildstr.="<img src=\"".image_url($row->imageurl)."\" >"; 
 			$buildstr .= "</div";		
