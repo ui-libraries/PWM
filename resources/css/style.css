@@ -125,6 +125,11 @@ p.footer {
 */
 }
 
+.popupimage {
+	clear:both;
+	padding:10px;
+}
+
 #footer {
 	clear:left;
 	width:100%;
