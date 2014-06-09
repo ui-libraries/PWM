@@ -31,12 +31,12 @@
     <div class="vspacer"></div>
 
 
-    <p>As the waters were rising , Craig and Brian Stephan, family and friends, 20 people in all, evacuated the computers and their business records to a building near Coe College, and sandbagged the building at 3rd St. and 7th Ave.S.E. In hindsight, they wish they had just evacuated everything. The Iowa Midland Supply building took on 10 feet of water, extending into their second storey.</p>
+    <p>As the waters were rising, Craig and Brian Stephan, family and friends, 20 people in all, evacuated the computers and their business records to a building near Coe College, and sandbagged the building at 3rd St. and 7th Ave.S.E. In hindsight, they wish they had just evacuated everything. The Iowa Midland Supply building took on 10 feet of water, extending into their second storey.</p>
 
     <div class="leftcol500 nomargin">
-    	<img class="alignleft" width="100%"  alt="Brian Stephan in front of flooded Midland Supply" src="<?php echo image_url('linn/Midland/Brian.jpg');?>">
+	<div class="vspacer"></div>
 
-		<div class="vspacer"></div>
+		<iframe src="//player.vimeo.com/video/96244971?byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 		<p>After a couple weeks of clean up work, Craig Stephan said later, they had neither the time, money nor inclination to save it all. Some 125 dumploads were taken from the building that the Stephan’s stripped of everything but concrete and steel.</p>
 
