@@ -43,8 +43,8 @@
     var map;
     
     function init() {
-		//add a leaflet map
-	    map = L.map('map_container').setView([41.6822, -95.8242], 15);
+		//add a leaflet map 
+	    map = L.map('map_container').setView([41.72366806458552, -95.84266662597656], 10);
 
 		// add an OpenStreetMap tile layer
 		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
