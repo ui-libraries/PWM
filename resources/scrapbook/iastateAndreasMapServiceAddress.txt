@@ -1,0 +1,4 @@
+http://ags.gis.iastate.edu/ArcGISServer/rest/services/Ortho/andreas/ImageServer
+
+WMS service info:
+http://ags.gis.iastate.edu/ArcGISServer/services/Ortho/andreas/ImageServer/WMSServer?request=GetCapabilities&service=WMS

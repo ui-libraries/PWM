@@ -35,29 +35,27 @@
     </div>
     
 <script type="text/javascript">
-    var map;
-    function init() {
-        map = new OpenLayers.Map('map_container',{
-//            projection:﻿'EPSG:4326',
-            projection:﻿'EPSG:26915',
-            maxExtent: new OpenLayers.Bounds(202159,4470000,737457.523439407,4822691.7712555),
-            fractionalZoom: true
-        });
-
-        var wms = new OpenLayers.Layer.WMS(
-            'OpenLayers WMS',
-            'http://ags.gis.iastate.edu/arcgisserver/services/Ortho/andreas/ImageServer/WMSServer',
-            {layers: 'basic'},
-            {isBaseLayer: true },
-            {}
-        );
-        map.addLayer(wms);
-        	
-        if (!map.getCenter()){
-           	map.zoomToMaxExtent();
+	var map;
+	function init() {
+		map = new OpenLayers.Map('map_container',{
+			projection:'EPSG:26915',
+			maxExtent: new OpenLayers.Bounds(202159,4470000,737457.523439407,4822691.7712555),
+			fractionalZoom: true
+		});
+		var wms = new OpenLayers.Layer.WMS(
+			'OpenLayers WMS',
+			'http://ags.gis.iastate.edu/arcgisserver/services/Ortho/andreas/ImageServer/WMSServer',
+			{layers: 'basic'},
+			{isBaseLayer: true },
+			{}
+		);
+		
+		map.addLayer(wms);
+		
+		if (!map.getCenter()){
+			map.zoomToMaxExtent();
 		}
 	}
 </script>
-
 
 <?php include('includes/standard_footer.incl'); ?>
