@@ -220,6 +220,10 @@ p.footer {
 	padding-top:5px;
 	padding-bottom:5px;
 }
+.lead_in {
+	font-weight:bold;
+	font-variant:small-caps;	
+}
 
 .caption {
 	width:100%;
