@@ -55,7 +55,9 @@ class Home extends CI_Controller {
 		$query_popups = $this->popups->get_popups($view_name);
 		$n=1;
 		foreach ($query_popups->result() as $popup) {
-			$this->view_data["iconname"][$n]=$this->popups->build_icon($popup->icon_id);
+			if($popup->iconurl !='none' && !empty ($popup->iconurl)) {
+				$this->view_data["iconname"][$n]=$this->popups->build_icon($popup->icon_id);
+			}
 			$this->view_data["markername"][$n] = $this->popups->build_marker($popup->marker_id);
 			$this->view_data["popupname"][$n] = $this->popups->build_popup($popup->popup_id);
 			//$this->view_data["bindpopup"][$n] = $popup->markername.".bindPopup(".$popup->popupname.");";

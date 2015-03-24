@@ -55,7 +55,8 @@ $db['default']['port'] = 5432;
 //note opengeo is temporary user...not secure and superuser is a bad combo.
 $db['default']['username'] = 'opengeo';
 $db['default']['password'] = 'opengeo';
-$db['default']['database'] = 'PWM';
+//$db['default']['database'] = 'PWM';
+$db['default']['database'] = 'PWM-Sandbox';
 $db['default']['dbdriver'] = 'postgre';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

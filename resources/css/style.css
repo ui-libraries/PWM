@@ -224,6 +224,9 @@ p.footer {
 	font-weight:bold;
 	font-variant:small-caps;	
 }
+.byline {
+	font-style:italic;	
+}
 
 .caption {
 	width:100%;

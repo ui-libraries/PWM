@@ -16,7 +16,7 @@ class Popups extends CI_model {
     }
     
     function get_popups($view){
-    	$sql = "SELECT popups_icons.id AS icon_id, popups_icons.iconname AS iconname,
+    	$sql = "SELECT popups_icons.id AS icon_id, popups_icons.iconname AS iconname, popups_icons.iconurl AS iconurl,
 					popups_markers.id AS marker_id, popups_markers.markername,
 					popups.id AS popup_id, popups.popupname AS popupname 
 				FROM popups_views
@@ -53,17 +53,15 @@ class Popups extends CI_model {
 	    }
 	    return $iconStr;
     }
- 
- 
     
     function build_marker($id){
-    	$sql = "SELECT markername, lat, lng, iconname, clickable, draggable, keyboard, title,  zindexoffset, opacity, riseonhover, riseoffset  
+    	$sql = "SELECT markername, layergroup, markertype, coords, iconname, clickable, draggable, keyboard, title,  zindexoffset, opacity, riseonhover, riseoffset  
     			FROM popups_markers WHERE id = $id";
 	    $query = $this->db->query($sql);
 	    if ($query->num_rows()>0){
 	    	$row = $query->row();
 	    	$optionStr = '';
-	    	if(!empty($row->iconname)){ $optionStr.="icon:".$row->iconname.",\n";}
+	    	if(!empty($row->iconname) && $row->markertype == 'point'){ $optionStr.="icon:".$row->iconname.",\n";}
 	    	if(!empty($row->clickable)){ $optionStr.="clickable:".strtolower($row->clickable).",\n";}
 	    	if(!empty($row->draggable)){ $optionStr.="draggable:".strtolower($row->draggable).",\n";}
 	    	if(!empty($row->keyboard)){ $optionStr.="keyboard:".strtolower($row->keyboard).",\n";}
@@ -74,7 +72,19 @@ class Popups extends CI_model {
 	    	if(!empty($row->riseoffset)){ $optionStr.="riseOffset:".$row->riseoffset.",\n";}
 		    if (strlen($optionStr)>0) {$optionStr = substr($optionStr,0,-2);}
     	     	
-	    	$markerStr = "var ".$row->markername." = L.marker( [".$row->lat.",".$row->lng."], {";
+	    	switch ($row->markertype) {
+		    	case "line":
+					$markerStr = "var ".$row->markername." = L.polyline( [".$row->coords."], {\n";
+		    		break;
+		    	case "polygon":
+					$markerStr = "var ".$row->markername." = L.polygon( [".$row->coords."], {\n";
+		    		break;
+		    	case "circle":
+					$markerStr = "var ".$row->markername." = L.circle( [".$row->coords."], {\n";
+		    		break;
+		    	default; //default to point
+					$markerStr = "var ".$row->markername." = L.marker( [".$row->coords."], {\n";
+	    	}
 	    	$markerStr .= "$optionStr\n";
 	    	$markerStr .= "}).addTo(map);\n";	
 	    }
@@ -145,7 +155,6 @@ class Popups extends CI_model {
 		$this->db->where('viewname', $viewname);
 		$query = $this->db->get('popups_views');
 		$row=$query->row();
-		
 		if (strlen($row->offset_x)>0 && strlen($row->offset_y)>0) {
 			$bindstr = "var offset_xy = L.point(".$row->offset_x.",".$row->offset_y.");";
 			$bindstr .= $row->markername.".bindPopup(".$popupname.", {offset:offset_xy});";
