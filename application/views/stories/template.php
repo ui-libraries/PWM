@@ -48,3 +48,32 @@
     </div>
 
     <div class="vspacer"></div>
+ 
+<!--quickflip example    
+	<div class="quickFlip_1 centered" style=" width:500px; height:272px;" >
+        <div class="front">
+            <img class="quickFlipCta" src="<?php echo image_url('xxxx.jpg') ?>">
+
+            <div class="caption">
+                click on image to flip
+            </div>
+        </div>
+
+        <div class="back">
+            <img class="quickFlipCta" src="<?php echo image_url('xxxx.jpg') ?>">
+
+            <div class="caption">
+                click on image to flip
+            </div>
+        </div>
+    </div>	    
+
+<script type="text/javascript">
+$(document).ready(function(){
+        $(function() {
+            $('.quickFlip_1').quickFlip();
+        });
+    });
+
+</script>
+-->
