@@ -114,22 +114,6 @@
 	    <div class="vspacer"></div>		
 	    
 
-<!--
-    <div class="leftcol500 nomargin">
-		<div class="vspacer"></div>
-		<p></p>
-		<div class="vspacer"></div>
-	</div>
-
-    <div class="rightcol500 nomargin">
-        <p></p>
-        <div class="vspacer"></div>
-
-		<div class="vspacer"></div>
-
-		<p></p>
-    </div>
--->
     </div>
  
 <script type="text/javascript">
