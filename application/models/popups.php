@@ -55,8 +55,13 @@ class Popups extends CI_model {
     }
     
     function build_marker($id){
+/*
     	$sql = "SELECT markername, layergroup, markertype, coords, iconname, clickable, draggable, keyboard, title,  zindexoffset, opacity, riseonhover, riseoffset  
     			FROM popups_markers WHERE id = $id";
+*/
+    	$sql = "SELECT markername, markertype, coords, iconname, clickable, draggable, keyboard, title,  zindexoffset, opacity, riseonhover, riseoffset  
+    			FROM popups_markers WHERE id = $id";
+
 	    $query = $this->db->query($sql);
 	    if ($query->num_rows()>0){
 	    	$row = $query->row();
