@@ -18,21 +18,21 @@
 	    <p>The tornado first touched down 3 miles east of Tipton around 12:30 pm and proceeded on a northeasterly track. It first struck the Raymond Hasenbank farm south of Clarence. A barn, brooder house, garage and machine shed were a complete loss. Next in its path was the Richard Dirck’s farm south of Clarence where eleven buildings were demolished.</p>
 	    <p>From there it hit the Hugo Shroeder farm where it destroyed two barns and a hog house. Traveling northeastward it struck the Lowden area. The Fred Kahl farm and Lester Rowold farm had barns destroyed and other buildings damaged. Harlan Pruess lost a machine shed at his farm. </p>
 	    <p>The storm struck the Myron Conrad farm next, destroying two barns. Up the road at the Arnold 
-Wendt farm, all sixteen of the farm buildings and the house were heavily damaged or destroyed.</p>
+Wenndt farm, all sixteen of the farm buildings and the house were heavily damaged or destroyed.</p>
 
     	<!-- <img class="alignleft" width="100%"  alt="Brian Stephan in front of flooded Midland Supply" src="<?php echo image_url('linn/Midland/Brian.jpg');?>"> -->
 	    <div class="centered">
-			<p class = "caption"> Arnold Wendt Farm</p>
+			<p class = "caption"> Arnold Wenndt Farm</p>
 		    <div class="quickFlip_1 alignleft" style=" width:333px; height:250px;" >
 		        <div class="front">
-		            <img class="quickFlipCta" src="<?php echo image_url('cedar/1965Tornado/PalmSundayTornado-1965Wendt_1-S-F.jpg') ?>">
+		            <img class="quickFlipCta" src="<?php echo image_url('cedar/1965Tornado/PalmSundayTornado-1965Wenndt_1-S-F.jpg') ?>">
 		            <div class="caption">
 		                click on image to flip
 		            </div>
 		        </div>
 		
 		        <div class="back">
-		            <img class="quickFlipCta" src="<?php echo image_url('cedar/1965Tornado/PalmSundayTornado-1965Wendt_1-S-B.jpg') ?>">
+		            <img class="quickFlipCta" src="<?php echo image_url('cedar/1965Tornado/PalmSundayTornado-1965Wenndt_1-S-B.jpg') ?>">
 		
 		            <div class="caption">
 		                click on image to flip
@@ -42,14 +42,14 @@ Wendt farm, all sixteen of the farm buildings and the house were heavily damaged
 	
 		    <div class="quickFlip_1 alignleft" style=" width:333px; height:250px;" >
 		        <div class="front">
-		            <img class="quickFlipCta" src="<?php echo image_url('cedar/1965Tornado/PalmSundayTornado-1965Wendt_2-S-F.jpg') ?>">
+		            <img class="quickFlipCta" src="<?php echo image_url('cedar/1965Tornado/PalmSundayTornado-1965Wenndt_2-S-F.jpg') ?>">
 		            <div class="caption">
 		                click on image to flip
 		            </div>
 		        </div>
 		
 		        <div class="back">
-		            <img class="quickFlipCta" src="<?php echo image_url('cedar/1965Tornado/PalmSundayTornado-1965Wendt_2-S-B.jpg') ?>">
+		            <img class="quickFlipCta" src="<?php echo image_url('cedar/1965Tornado/PalmSundayTornado-1965Wenndt_2-S-B.jpg') ?>">
 		
 		            <div class="caption">
 		                click on image to flip
@@ -59,14 +59,14 @@ Wendt farm, all sixteen of the farm buildings and the house were heavily damaged
 	
 		    <div class="quickFlip_1 alignleft" style=" width:333px; height:250px;" >
 		        <div class="front">
-		            <img class="quickFlipCta" src="<?php echo image_url('cedar/1965Tornado/PalmSundayTornado-1965Wendt_3-S-F.jpg') ?>">	
+		            <img class="quickFlipCta" src="<?php echo image_url('cedar/1965Tornado/PalmSundayTornado-1965Wenndt_3-S-F.jpg') ?>">	
 		            <div class="caption">
 		                click on image to flip
 		            </div>
 		        </div>
 		
 		        <div class="back">
-		            <img class="quickFlipCta" src="<?php echo image_url('cedar/1965Tornado/PalmSundayTornado-1965Wendt_3-S-B.jpg') ?>">
+		            <img class="quickFlipCta" src="<?php echo image_url('cedar/1965Tornado/PalmSundayTornado-1965Wenndt_3-S-B.jpg') ?>">
 		
 		            <div class="caption">
 		                click on image to flip
@@ -80,7 +80,7 @@ Wendt farm, all sixteen of the farm buildings and the house were heavily damaged
 		<img class="centered" width="100%" src="<?php echo image_url('cedar/1965Tornado/PalmSundayTornado-1965Nieting-L.jpg');?>">
 		<p class = "caption">Damage caused on Nieting’s Farm</p>
 	    <div class="vspacer"></div>
-	    <p>The Herbert Kroemer farm received extensive damage to the farm buildings. At the Kruckenberg farm, Hugo, his sister, Dorothea, and his mother, Marie, were sleeping when the storm hit their house and threw all of three of them to the floor. All of their buildings were damaged or destroyed. They lost 500 chickens. Some of the carcasses were found in the timber over a mile away. </p>
+	    <p>At the Kruckenberg farm, Hugo, his sister, Dorothea, and his mother, Marie, were sleeping when the storm hit their house and threw all of three of them to the floor. All of their buildings were damaged or destroyed. They lost 500 chickens. Some of the carcasses were found in the timber over a mile away. </p>
 		<img class="centered" width="100%" src="<?php echo image_url('cedar/1965Tornado/PalmSundayTornado-1965Kruckenberg-Lg.jpg');?>">
 		<p class = "caption">Kruckenberg’s destroyed farm after the Palm Sunday Tornado</p>
 	    <div class="vspacer"></div>
