@@ -65,12 +65,12 @@ class Home extends CI_Controller {
 			$n++;
 		}
 		$this->view_data['n']= $n;
-		
 		$this->load->view($view_name, $this->view_data);
 
 	}
 	
 	public function story($caller,$story) {
+
 		$this->view_data['story_include'] = "stories/".$caller."/".$story.".php";
 		$this->view_data['return'] =$caller;
 		$this->load->view('v_story',$this->view_data);

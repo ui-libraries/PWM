@@ -44,8 +44,8 @@
 		});
 		var wms = new OpenLayers.Layer.WMS(
 			'OpenLayers WMS',
-			'http://ags.gis.iastate.edu/arcgisserver/services/Ortho/andreas/ImageServer/WMSServer',
-			{layers: 'basic'},
+			'http://athene.gis.iastate.edu/arcgis/services/ortho/andreas/ImageServer/WMSServer',
+			{layers: 'andreas', format: "image/png" },
 			{isBaseLayer: true },
 			{}
 		);

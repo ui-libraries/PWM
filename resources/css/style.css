@@ -177,6 +177,7 @@ p.footer {
 /* Images */
 .alignleft {
 	float:left;
+	text-align: left;
 }
 .spaceright {
 	margin-right: 20px;
