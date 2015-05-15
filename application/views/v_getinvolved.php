@@ -30,16 +30,37 @@
 					</ul>
 					<div id="tabs-1">
 				    	<h3>Contribute a story of extreme weather</h3>
-				    	<p class="spaceleft">We welcome story contributions to the Peoples' Weather Map. We have included some general submission guidelines below. After reviewing these guidelines, please contact us at the email address below and we would be happy to answer any questions you might have, and discuss with you how to submit the story materials.</p>
-				    	<p class="spaceleft">
-				    		<ul><li><a href="mailto:submissions@peoplesweathermap.org">submissions@peoplesweathermap.org</a></li></ul>
-				    	</p>
-					    
-				    	<h4>Submission Guidelines</h4>
-				    	<p class="spaceleft">
-					    	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				    	</p>
-					</div>
+				    	<div class="spaceleft">
+					    	<p>We welcome story contributions to the Peoples' Weather Map. We have included some general submission guidelines below. After reviewing these guidelines, please contact us at the following email address and we would be happy to answer any questions you might have, and discuss with you how to submit the story materials.</p>
+					    		<ul><li><a href="mailto:submissions@peoplesweathermap.org">submissions@peoplesweathermap.org</a></li></ul>
+				    	</div>				    	
+						<h3>How to Make a Severe Weather Story Map for Your County in Iowa</h3>
+						<ol>
+							<li>After you choose a county to research and write about, learn general information about the county (population, geography, local sources of pride, etc.). This will help place you more in the mindset of the people you will be writing about once you choose specific severe weather stories.</li>
+							<li>Google is always a great place to start. Look up severe weather events that have occurred in the past. I suggest using search terms such as flood, blizzard, tornado, drought, etc. Write down the events of any news articles that pop up and their location(s).</li>
+							<li>Compile a list of cities/towns and their populations. This will help in later steps.</li>
+							<li>After you have a general understanding of the county, you should start to compile a list of weather events that have occurred in the past. To do this, I recommend visiting the Historical Society and searching through their online database. This can be done at home as well, just use this link: <a href = "http://infohawk.uiowa.edu/F?func=file&file_name=find-b&local_base=iow06" target = "_blank">http://infohawk.uiowa.edu/F?func=file&file_name=find-b&local_base=iow06</a>
+								<ol type = "a">
+									<li>First try to search directly for severe weather events using key terms like “flooding Harrison County.” Make notes of the events that are mentioned in the Historical Society’s holdings (note the difference between the Iowa City and the Des Moines locations).</li>
+									<li>Continue to search through the catalog, but this time look specifically for centennial and bicentennial publications and pictorial books, oral histories, etc. that are related to the towns in your county. Search the town’s name along with the publication type. These are usually invaluable to finding stories (and to use for primary source material), so you want to make a list of the publications and their call numbers and visit the Historical Society to flip through them and search for events that you might want to write about. Note these events on your master list.</li>
+									<li>You can also try the Historical Society’s newspaper search. This can only be done on the computers at the Historical Society — ask for help about how to access the database. Sometimes this can provide a helpful way to find severe weather events that have occurred in more recent times (within the last 30 years or so). These articles can be saved as .pdf files and uploaded to a flash drive at the Historical Society.</li>
+									<li><b>Keep track of these sources! We need to be able to give proper credit to sources in our bibliography.</b></li>
+								</ol>
+							</li>
+							<li>Once you have compiled an exhaustive list of the severe weather events spanning the entire history of the county, group stories by event (floods, droughts, blizzards, etc.) and narrow your list down to the handful of stories you want to write about. Choose events that have plenty of sources, but also make sure they apply to the scope of the assignment.</li>
+							<li>After your stories are selected, you can begin to conduct research and learn more nuanced information about the specific event. Take photos or scan photographs found in books and compile information related to your stories. Look through newspapers on microfilm at the Historical Society in the town(s) you are writing about — you will have to know the date when your event occurred so you can scroll through the newspaper collection and access stories from around that period. Take screenshots of these stories on microfilm or print them out to use in the writing process.
+								<ul>
+									<li>Quotations are often important to shape these stories — particularly testimony/witness accounts. Save quotations if you find any that might be useful.</li>
+								</ul>
+							<li>Now you can finally begin to write your stories. Focus on a specific theme to write about (one you feel represents the severe weather event you are covering) and weave this theme throughout your story. <b>Make a list at the end of the story noting all of the sources you used to write the piece.</b></li>
+							<li>After your story is complete, go back through it and add photographs of the event. Write captions (if necessary) that briefly summarize the event in each photo.</li>
+						</ol>
+						<h4>Suggestions if you run into a dead end: </h4>
+						<ul>
+							<li>It helps to keep the main focus on these stories small. Write about a specific place at a specific point in time. Often the places highlighted can be local businesses rather than entire towns or cities that were impacted by a severe weather event. An entire story could even be told about one person who was strongly impacted by a storm.</li>
+							<li>If you need more information on a story, you can also visit the Iowa Women’s Archive in the University of Iowa Main Library and look through postcards and photographs in the Special Collections area of the Historical Society.</li>
+						</ul>
+					</div>	
 					<div id="tabs-2">
 						<h3>Share a family diary or artifact</h3>
 					    <p class="spaceleft">Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
