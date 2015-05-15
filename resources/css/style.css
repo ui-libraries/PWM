@@ -124,6 +124,10 @@ p.footer {
     padding-bottom: 99999px;
 */
 }
+#singlecolumn{
+	width:95%;
+	min-height: 600px;
+}
 
 .popupimage {
 	clear:both;
