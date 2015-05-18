@@ -67,7 +67,7 @@
 					<div id="tabs-2">
 						<h3>Share a family diary or artifact</h3>
 					    	<p class="spaceleft">Sometimes personally meaningful artifacts can provide a visual narrative that is as effective as a written narrative, or more so. If you have an artifact that you feel fits into this category we would love to consider including an image and description of the artifact in the Peoples Weather Map. </p>
-					    	<p class="spaceleft">Please contact us at the address below describing the artifact, and if possible, attach a picture. </p>
+					    	<p class="spaceleft">Please contact us at the address below describing the artifact, and if possible, attach pictures. </p>
 					    		<ul><li><a href="mailto:submissions@peoplesweathermap.org">submissions@peoplesweathermap.org</a></li></ul>
 
 					    <p class="spaceleft">Before sending anything, please be sure that you have the permission to do so. We cannot place any material that is limited by copyright on our site. For family artifacts, please make sure that you have informal agreement among all interested family members that this artifact can be shared publicly.</p>
