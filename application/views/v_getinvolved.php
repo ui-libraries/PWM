@@ -44,10 +44,10 @@
 									<li>First try to search directly for severe weather events using key terms like “flooding Harrison County.” Make notes of the events that are mentioned in the Historical Society’s holdings (note the difference between the Iowa City and the Des Moines locations).</li>
 									<li>Continue to search through the catalog, but also begin to look for centennial and bicentennial publications, pictorial books, oral histories, etc. that are related to the towns in your county. You can search the town’s name along with the publication type. These are usually invaluable to finding stories (and to use for primary source material), so you want to make a list of the publications and their call numbers and visit the Historical Society to flip through them and search for events that you might want to write about. Note these events on your master list.</li>
 									<li>You can also try the Historical Society’s newspaper search. This can only be done on the computers at the Historical Society — just ask for help about how to access the database. Sometimes this can provide a helpful way to find severe weather events that have occurred more recently (within the last 30 years or so). These articles can be saved as .pdf files and uploaded to a flash drive at the Historical Society.</li>
-									<li><b>It is criticak to keep track of every source! We need to be able to give proper credit to sources in our bibliography.</b></li>
+									<li><b>It is critical to keep track of every source! We need to be able to give proper credit to sources in our bibliography.</b></li>
 								</ol>
 							</li>
-							<li>Once you have compiled an exhaustive list of the severe weather events spanning the entire history of the county, group stories by event (floods, droughts, blizzards, etc.) and narrow your list down to the handful of stories you want to write about. Choose events that have plenty of sources, but also make sure they akign with the goals of the PWM.</li>
+							<li>Once you have compiled an exhaustive list of the severe weather events spanning the entire history of the county, group stories by event (floods, droughts, blizzards, etc.) and narrow your list down to the handful of stories you want to write about. Choose events that have plenty of sources, but also make sure they align with the goals of the PWM.</li>
 							<li>After selecting your stories, begin to conduct research and explore more nuanced information about the specific event. As examples:
 							<ul>
 								<li>Take photos or scan photographs found in books and compile information related to your stories. </li>
@@ -66,7 +66,11 @@
 					</div>	
 					<div id="tabs-2">
 						<h3>Share a family diary or artifact</h3>
-					    <p class="spaceleft">Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+					    	<p class="spaceleft">Sometimes personally meaningful artifacts can provide a visual narrative that is as effective as a written narrative, or more so. If you have an artifact that you feel fits into this category we would love to consider including an image and description of the artifact in the Peoples Weather Map. </p>
+					    	<p class="spaceleft">Please contact us at the address below describing the artifact, and if possible, attach a picture. </p>
+					    		<ul><li><a href="mailto:submissions@peoplesweathermap.org">submissions@peoplesweathermap.org</a></li></ul>
+
+					    <p class="spaceleft">Before sending anything, please be sure that you have the permission to do so. We cannot place any material that is limited by copyright on our site. For family artifacts, please make sure that you have informal agreement among all interested family members that this artifact can be shared publicly.</p>
 					</div>					
 				</div>
 	    	</div>
