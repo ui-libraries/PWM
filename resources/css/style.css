@@ -175,6 +175,10 @@ p.footer {
 	font-style:italic;
 }
 
+.spaceabove {
+	padding-top: 1.2em;
+}
+
 #main_menu {
 	float:left;
 	padding-left:10px;
