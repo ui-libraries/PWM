@@ -259,6 +259,14 @@ p.footer {
 	width:500px;
 	margin: 10px;
 }
+.singlecol {
+	clear:both;
+	width:100%;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+
 .nomargin {
 	margin: 0px;
 }
