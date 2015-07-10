@@ -141,7 +141,12 @@ class Popups extends CI_model {
 			$imgaddress=image_url($row->imageurl);
 			$size = getimagesize("$imgaddress");
 			$buildstr.= "<div class=\"popupimage\" style=\"height:".$size[1]."px; width:".$size[0]."px;\">";
-			$buildstr.="<img src=\"".image_url($row->imageurl)."\" >"; 
+			//make the image a link to the story
+			if (!empty($row->buttonurl)){
+				$buildstr .="<a href = \"".site_url($row->buttonurl)."\"><img src=\"".image_url($row->imageurl)."\" ></a>";
+			} else {
+				$buildstr.="<img src=\"".image_url($row->imageurl)."\" >"; 			
+			}
 			$buildstr .= "</div>";		
 		}
 		if (!empty($row->body)) {$buildstr.="<div class=\"popuptxt\">".$row->body."</div>";}
