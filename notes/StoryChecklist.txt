@@ -1,0 +1,117 @@
+- Set up County Menu and landing page (if not already done)
+    - Open menus.xlsm in the resources/csv folder (enable macros)
+    - Find the county name in menu_items and make note of the id
+    - switch to “menus” sheet and create a new menu line using the id
+      found in menu_items, and the county name for menu_desc. Unless it
+      is a special case, the other fields should duplicate entries in
+      the other county menu items
+    - add sort
+    - in the menu_views spreadsheet, include the menu_item id and the
+      name of the view (generally the county name)
+    - Set Local Submenu
+        - At the bottom of the menu_items add county menu id to
+          child_of field
+        - add menu id with trailing zeroes to id field
+        - at minimum add home and reset menu item
+        - add other menu items and submenu items depending upon
+          available materials
+    - Currently create a new county page from county template.php in
+      the views folder.
+        - Future I think this will be a generic template into which we
+          pass values
+    - Set coords and magification.
+        - Run macro to save menus stylesheets as csv
+        - comment map on click event in county view
+        - run admin page and Load menus 
+        - find coordinates of desired view by  trial and error
+        - update county view with coordinates and zoom level
+- Find coordinates for event
+    - Lat, Lon : 41.60748491954806, -95.78181266784668
+- Marker
+    - If marker is point type
+        - Choose marker icon image 
+        - resize to approx 120px (smaller if many markers to occupy the
+          same map area)
+        - copy to PWM/resources/image/<county name>/popups
+- Popup
+    - Choose popup image
+    - Size to somewhere around 300px
+        - Make note of width
+    - copy to PWM/resources/image/<county name>/popups
+- Open PWM/resources/csv/popups.xlsx (enable macros)
+    - Duplicate last line
+    - popups
+        - give it a descriptive name
+        - set maxwidth to popup image width +20 px
+        - set minwidth to popup image width.
+    - popups content (defines the content of the popup window)
+        - Set title to type of event and year
+        - Set subtitle to location
+        - Add optional body text
+        - add url to imageurl
+            - this will be the relative url starting at the
+              PWM/resources/image folder
+        - add url to buttonurl
+            - This will be the uri to the view file
+              home/story/harrison/<story name>
+    - popups_icons (defines the icon and location that  will be used
+      for the popup marker)
+        - If the popup_markers.type = point (not polyline or polygon)
+            - icon name - choose descriptive name
+            - iconurl - path to the icon image e.g.,
+              harrison/popups/LoganIcon.jpg
+            - iconsize_x, iconsize_y
+                - generally enter the full size of the icon file
+            - iconanchor_x, iconanchor_y
+                - can be used to adjust the location of the marker in
+                  relationship to the event coordinates. Measurement is
+                  in pixels
+        - if the popup_markers.type != point (polyline or polygon)
+            - icon name - choose descriptive name
+            - icon url - set to “none”
+        - popupanchor_x, popupanchor_y
+            - can be used to adjust the location of the popup window in
+              relationship to the marker (i think, but may be in
+              relationship to the  event coordinates). Measurement is
+              in pixels
+            - desc
+                - add a description of the popup icon so that you
+                  recognize which one it is on the map
+    - popups_markers
+        - marker_name - give the marker a descriptive name
+        - Layergroup
+            - If there will be more than one layer on the map, include
+              layer group names, otherwise leave blank
+        - Indicate marker type
+            - point, polyline, polygon, [circle not yet implemented]
+        - coords
+            - enter the lat and lng coordinates for the event
+              determined in step 1
+            - For Point events, enter lat, lng in the form
+              yy.yyyyy,x,xxxxx
+            - for polylines and polygibs events use
+              [yy.yyyyy,x,xxxxx],[yy.yyyyy,x,xxxxx],…
+    - popups_views
+        - Enter the name of the view for this story (generally the
+          county name)
+        - markername, iconname, popupname should be filled in
+          automatically
+        - offset_x. offset_y can be used to reposition the popup window
+          (a little bit unsure of what the difference between this and
+          popupanchor_x
+    - Run SaveWorksheetsAsCSV Macro
+    - Import the popups into the map using this address
+        - Local Address: http://localhost:8888/PWM/index.php/admin
+        - Server Address http://PeoplesWeatherMap/index.php/admin
+- Prep images
+    - Color balance and contrast (generally the “auto” settings for
+      both of these in photoshop are pretty good)
+    - Correct any rotation problems
+    - Crop to eliminate edges
+    - Save full size
+    - Save for Web at Width 500px
+        - Target size below 150K
+- Build Story Page
+    - Start with template.php in the stories folder
+    - Save file in the appropriate county folder using the Event
+      location and year as the file name
