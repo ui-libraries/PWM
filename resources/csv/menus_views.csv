@@ -1,1 +1,1 @@
-id,menu_id,view_name1,6065,linn2,200,nasa_1820_20113,6043,harrison4,6071,cedar5,6036,ida6,6002,lyon
+id,menu_id,view_name,view_center_lat,view_center_lng,view_zoom1,6065,linn,41.97499774,-91.66723967,152,200,home,,,3,6043,harrison,41.72366806,-95.84266663,104,6071,cedar,41.80151887,-91.14017487,115,6036,ida,42.3444,-95.4706,136,6002,lyon,43.3833,-96.2167,10

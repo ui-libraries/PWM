@@ -40,8 +40,18 @@ class Home extends CI_Controller {
 	public function view($view_name, $menu_id = null) {
 		
 		$this->local_menu_id = $this->menus->get_view_menu($view_name);
+		
 		$this->view_data['local_menu_id'] = $this->local_menu_id;
 		$this->view_data['local_menu'] = $this->menus->build_menu($this->local_menu_id);
+		
+		//set the lat lng and zoom of the view
+		$this->db->where('menu_id',$this->local_menu_id );
+		$query=$this->db->get('menus_views');
+		$menu_view =$query->row(); 
+		$this->view_data['lat'] = $menu_view->view_center_lat;
+		$this->view_data['lng'] = $menu_view->view_center_lng;
+		$this->view_data['zoom'] = $menu_view->view_zoom;
+		
 /*
 		$this->local_menu_id = $menu_id;
 		$this->view_data['local_menu_id'] = (!empty($this->local_menu_id))? $this->local_menu_id : 0 ;
@@ -65,7 +75,8 @@ class Home extends CI_Controller {
 			$n++;
 		}
 		$this->view_data['n']= $n;
-		$this->load->view($view_name, $this->view_data);
+		//$this->load->view($view_name, $this->view_data);
+		$this->load->view('v_county', $this->view_data);
 
 	}
 	
