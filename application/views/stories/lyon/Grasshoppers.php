@@ -42,12 +42,11 @@ In fact, by 1902, one likely species implicated in the Lyon County trouble—Roc
 	    <div class="vspacer"></div>
     </div>
 
-	<div class="singlecol">Sources: 
-		<i>Bonnie Doon: Our Town: History of Doon, 1868-1992</i>, compiled and written by Galen Lawrence, Dee Keegan, and Harold Aardema, submitted by Roseanna Zehner mslace@netins.net Dec 2002 to USGENWEB Archives Project. Web. 6/2015; Matthew M. Colbert, MA history thesis Iowa State University: “General Nathaniel B. Baker and the Grasshopper Plagues of Northwest Iowa, 1873-1875” 2009. Web. 6/2015; “Rocky Mountain Locust,” Wikipedia. Web. 6/2015; email correspondence from Jeff Lockwood to Barbara Eckstein, 9/2/2014.
-
+	<div class="singlecol">
 	    <div class="vspacer"></div>
     	<img class="alignleft" width="100%"  alt="Locust Migration Map" src="<?php echo image_url('lyon/Locusts/LocustMap.jpg');?>"> 
 	    <div class="vspacer"></div>
+		Sources: <i>Bonnie Doon: Our Town: History of Doon, 1868-1992</i>, compiled and written by Galen Lawrence, Dee Keegan, and Harold Aardema, submitted by Roseanna Zehner mslace@netins.net Dec 2002 to USGENWEB Archives Project. Web. 6/2015; Matthew M. Colbert, MA history thesis Iowa State University: “General Nathaniel B. Baker and the Grasshopper Plagues of Northwest Iowa, 1873-1875” 2009. Web. 6/2015; “Rocky Mountain Locust,” Wikipedia. Web. 6/2015; email correspondence from Jeff Lockwood to Barbara Eckstein, 9/2/2014.
 <p>[Images courtesy of the <i>State Historical Society of Iowa</i>]</p>
 
 	    <div class="vspacer"></div>
