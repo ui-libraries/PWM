@@ -12,14 +12,16 @@
     <p class="byline"></p>
 
     <!-- full width text 
-    <p></p>
+	<div class="singlecol">
+	    <p></p>
+    </div>
     -->
     
     <!-- left column text and image -->
     <div class="leftcol500 nomargin">
 	    <p><span class="lead_in"></span></p>
 	    <div class="vspacer"></div>
-    	<!-- <img class="alignleft" width="100%"  alt="Brian Stephan in front of flooded Midland Supply" src="<?php echo image_url('linn/Midland/Brian.jpg');?>"> 
+    	<!-- <img class="alignleft" width="100%"  alt="alternate text" src="<?php echo image_url('linn/Midland/Brian.jpg');?>"> 
 	    <p class="caption"></p>
     	-->
 
@@ -31,9 +33,8 @@
     </div>
 
 <!--
-second set of columns
+To start a second set of columns include a clearboth div
     <div class="clearboth"></div>
-    <div class="vspacer"></div>
 
     <div class="leftcol500 nomargin">
 		<div class="vspacer"></div>
