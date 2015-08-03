@@ -75,7 +75,7 @@ class Home extends CI_Controller {
 			$n++;
 		}
 		$this->view_data['n']= $n;
-		//$this->load->view($view_name, $this->view_data);
+		//$this->load->view($view_name, $this->view_data);		
 		$this->load->view('v_county', $this->view_data);
 
 	}
