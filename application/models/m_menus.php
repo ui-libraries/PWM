@@ -15,9 +15,8 @@ class Menus extends CI_model {
     }
     
     public function load_csv() {
-        $sql = "TRUNCATE TABLE menus CASCADE";
-        $query = $this->db->query($sql);
-        $result = "menus table and menu_items table truncated<br />";
+        $this->query->truncate('menus');
+        $result = "menus tables truncated<br />";
 
         $sql = "COPY menus FROM '".FCPATH."resources/csv/menus.csv' DELIMITER ',' CSV HEADER";
         $query = $this->db->query($sql);
