@@ -31,7 +31,7 @@ class Admin extends CI_Controller {
 	}
         
         public function import_menu(){
-            $this->load->model('menus');
+            $this->load->model('m_menus');
             
             $data['status_msg'] = $this->menus->load_csv();
             //fred ($data,"data");

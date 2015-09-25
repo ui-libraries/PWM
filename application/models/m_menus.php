@@ -7,13 +7,18 @@
  *
  * @author mneucoll
  */
-class Menus extends CI_model {
-
+class M_menus extends CI_model {
+	private $config;
+	
     function __construct() {
         // Call the Model constructor
         parent::__construct();
     }
     
+    private function set_upload_config() {
+	    $this->config['upload_path'] = FCPath."/import_data";
+	    $this->config['allowed_types']='xls|xlsx';
+    }
     public function load_csv() {
         $this->query->truncate('menus');
         $result = "menus tables truncated<br />";
