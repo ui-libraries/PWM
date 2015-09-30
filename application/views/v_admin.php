@@ -10,6 +10,8 @@
         ?>
     </head>
     <body>
+	    
+<?php fred ($popups, "popups in view");
         <div id="container">
             <div id="topsection">
                 <div class="innertube">
@@ -29,6 +31,10 @@
                             <li><a href ="admin/import_popups">Load Popups CSV files</a><br />
                                 <i>files to be loaded, must be located in <?php echo FCPATH."resources/csv/"; ?></i>
                             </li>
+
+                            <li><a href ="admin/add_edit_popup">Add/Edit Popups</a><br />
+                            </li>
+
                         </ul>
 
                     </div>

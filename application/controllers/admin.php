@@ -45,6 +45,19 @@ class Admin extends CI_Controller {
          public function getinfo() {
 	         $this->load->view('v_getinfo');
          }
+         
+        public function add_edit_popup(markerid = null) {
+			$this->load->model('popups');
+			$this->load->model('markers');
+			$this->load->model('icons');
+			$this->load->model('popups_content');
+			$data['popups']= $this->popups;
+			$data['markers']= $this->markers;
+			$data['icons']= $this->icons;
+			$data['popups_content']= $this->popups_content;
+			
+	        $this->load->view('v_addpopup', $data);
+        }
         
 }
 

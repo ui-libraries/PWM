@@ -9,6 +9,19 @@
  */
 class Popups extends CI_model {
 	
+	//table fields as attributes
+	public $id;	
+	public $popupname;	 
+	public $setlat;	
+	public $setlng;	
+	public $maxwidth;	
+	public $minwidth;	
+	public $maxheight;	
+	public $autopan;	
+	public $keepinview;	
+	public $closebutton;	
+	public $offset_x;	
+	public $offset_y;
 	
     function __construct() {
         // Call the Model constructor
