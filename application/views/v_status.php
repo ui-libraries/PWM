@@ -6,15 +6,40 @@
 
         <?php
         echo link_tag('resources/css/style.css');
+        include('includes/bootstrap_cdn.incl');
         ?>
     </head>
     <body>
-        <div id="container">
-
-        <h1>Status</h1>
-        <p><pre><?php echo $status_msg ?></pre></p>
-        <hr />
-        <a href="<?php echo base_url('/index.php/admin') ?>">Return to Admin Page</a><br />
-        <a href="<?php echo base_url('/index.php/home') ?>">Go to PWM Home</a>
+        <div class="container">
+	        <h1>Status</h1>
+	        <?php 
+		        if (!empty($status_msg)){
+		        	echo "<div class='alert alert-success'>".$status_msg."</div>";
+	        	}
+	        	if (!empty($error_msg)){
+		        	echo "<div class='alert alert-danger'>".$error_msg."</div>";
+	        	}
+				echo "<hr />";
+				echo "<br /><br />";
+				$formextras = array ('class' => 'btn btn-default', 'style' => 'width:200px');
+			?>
+			<div class="row">
+				<div class="col-sm-3">
+					<?php
+			        	echo form_open('admin/import_menu', array('class'=>'inline'));
+						echo form_submit('return','Return to Admin Menu',$formextras); 
+						echo form_close(); 
+					?>					
+				</div>				
+				<div class="col-sm-3">
+					<?php
+						echo form_open('admin/import_menu', array('class'=>'inline'));
+						echo form_submit('map','Go To Map',$formextras); 
+						echo form_close(); 
+			        ?>					
+				</div>				
+			</div>
+	        
+        </div>
     </body>
 </html>

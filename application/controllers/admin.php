@@ -1,50 +1,43 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
-
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/home
-	 *	- or -  
-	 * 		http://example.com/index.php/home/index
-	 *	- or -
-	 * Since this controller is set as the default controller in 
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
         
-        public $view_data;
-        
-        public function __construct () {
-            parent::__construct();
-        }
+    public $view_data;
     
-        public function index()
-	{   
-            //$data['main_menu'] = $this->main_menu;
-            $this->load->view('v_admin');
+    public function __construct () {
+        parent::__construct();
+    }
+
+    public function index(){   
+        //$data['main_menu'] = $this->main_menu;
+        $this->load->view('v_admin');
 	}
         
-        public function import_menu(){
-            $this->load->model('menus');
-            $data['status_msg'] = $this->menus->load_csv();
-            //fred ($data,"data");
-            $this->load->view('v_status', $data);
+    public function import_menu(){
+        $this->load->model('m_menus');
+        if ($this->input->post('upload')){
+            $do_upload = $this->m_menus->do_upload('userfile');
+            if (!$do_upload) {
+               $data['error_msg'] = "<strong>Error!</strong>".$this->upload->display_errors();
+			   $this->load->view('v_status', $data);
+			} else {
+	            $data['status_msg'] = "Uploaded ".$this->upload->data('file_name')."<br />";
+//fred ($data,"data");
+				$this->load->view('v_status', $data);
+            }
+            //$this->m_menus->upload_excel();
+        } elseif ($this->input->post('return')) {
+            redirect('admin');
+        } elseif ($this->input->post('map')) {
+            redirect('home');
+        } else {
+           	$this->load->view('v_menus_upload');
+
         }
-        
-        public function import_popups(){
-            $this->load->model('popups');
-            $data['status_msg'] = $this->popups->load_csv();
-            $this->load->view('v_status', $data);        
-        }
-         public function getinfo() {
+
+        public function getinfo() {
 	         $this->load->view('v_getinfo');
-         }
+        }
          
         public function add_edit_popup(markerid = null) {
 			$this->load->model('popups');
@@ -60,6 +53,3 @@ class Admin extends CI_Controller {
         }
         
 }
-
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */

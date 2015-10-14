@@ -23,9 +23,9 @@ class Home extends CI_Controller {
 
 	public function __construct () {
 		parent::__construct();
-		$this->load->model('menus');
+		$this->load->model('m_menus');
 		$this->load->model('popups');
-		$this->view_data['main_menu'] = $this->menus->build_menu(100);
+		$this->view_data['main_menu'] = $this->m_menus->build_menu(100);
 	}
 
 	public function index()
@@ -33,16 +33,16 @@ class Home extends CI_Controller {
 		//$data['main_menu'] = $this->main_menu;
 		$this->local_menu_id = 200;
 		$this->view_data['local_menu_id'] = $this->local_menu_id;
-		$this->view_data['local_menu'] = $this->menus->build_menu($this->local_menu_id);
+		$this->view_data['local_menu'] = $this->m_menus->build_menu($this->local_menu_id);
 		$this->load->view('v_home', $this->view_data);
 	}
 
 	public function view($view_name, $menu_id = null) {
 		
-		$this->local_menu_id = $this->menus->get_view_menu($view_name);
+		$this->local_menu_id = $this->m_menus->get_view_menu($view_name);
 		
 		$this->view_data['local_menu_id'] = $this->local_menu_id;
-		$this->view_data['local_menu'] = $this->menus->build_menu($this->local_menu_id);
+		$this->view_data['local_menu'] = $this->m_menus->build_menu($this->local_menu_id);
 		
 		//set the lat lng and zoom of the view
 		$this->db->where('menu_id',$this->local_menu_id );
@@ -56,7 +56,7 @@ class Home extends CI_Controller {
 		$this->local_menu_id = $menu_id;
 		$this->view_data['local_menu_id'] = (!empty($this->local_menu_id))? $this->local_menu_id : 0 ;
 		if (!empty($this->local_menu_id)) {
-			$this->view_data['local_menu'] = $this->menus->build_menu($this->local_menu_id);
+			$this->view_data['local_menu'] = $this->m_menus->build_menu($this->local_menu_id);
 		} else {
 			$this->view_data['local_menu']=""; //initialize so unset variable does not create a problem in the view
 		}

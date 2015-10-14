@@ -10,9 +10,7 @@
         ?>
     </head>
     <body>
-	    
-<?php fred ($popups, "popups in view");
-        <div id="container">
+        <div id="pwm_container">
             <div id="topsection">
                 <div class="innertube">
                     <div id="logo">
