@@ -128,7 +128,7 @@ class Popups extends CI_model {
 	
 	function build_content($popupname) {
 		$sql = "SELECT id, popupname, title, subtitle, body, imageurl, buttontxt, buttonurl
-				FROM public.popups_content
+				FROM popups_content
 				WHERE popupname = '".$popupname."'";
 		$query = $this->db->query($sql);
 		$row = $query->row();

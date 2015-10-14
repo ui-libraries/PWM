@@ -10,7 +10,7 @@
         ?>
     </head>
     <body>
-        <div id="container">
+        <div id="pwm_container">
             <div id="topsection">
                 <div class="innertube">
                     <div id="logo">
