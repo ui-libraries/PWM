@@ -7,7 +7,7 @@
  *
  * @author mneucoll
  */
-class Popups extends CI_model {
+class M_popups extends CI_model {
 	
 	//table fields as attributes
 	public $id;	

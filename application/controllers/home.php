@@ -24,7 +24,7 @@ class Home extends CI_Controller {
 	public function __construct () {
 		parent::__construct();
 		$this->load->model('m_menus');
-		$this->load->model('popups');
+		$this->load->model('m_popups');
 		$this->view_data['main_menu'] = $this->m_menus->build_menu(100);
 	}
 
@@ -62,16 +62,17 @@ class Home extends CI_Controller {
 		}
 */
 
-		$query_popups = $this->popups->get_popups($view_name);
+		$query_popups = $this->m_popups->get_popups($view_name);
 		$n=1;
 		foreach ($query_popups->result() as $popup) {
 			if($popup->iconurl !='none' && !empty ($popup->iconurl)) {
-				$this->view_data["iconname"][$n]=$this->popups->build_icon($popup->icon_id);
+				$this->view_data["iconname"][$n]=$this->m_popups->build_icon($popup->icon_id);
 			}
-			$this->view_data["markername"][$n] = $this->popups->build_marker($popup->marker_id);
-			$this->view_data["popupname"][$n] = $this->popups->build_popup($popup->popup_id);
+
+			$this->view_data["markername"][$n] = $this->m_popups->build_marker($popup->marker_id);
+			$this->view_data["popupname"][$n] = $this->m_popups->build_popup($popup->popup_id);
 			//$this->view_data["bindpopup"][$n] = $popup->markername.".bindPopup(".$popup->popupname.");";
-			$this->view_data["bindpopup"][$n] = $this->popups->bind_popup($popup->popupname, $view_name);
+			$this->view_data["bindpopup"][$n] = $this->m_popups->bind_popup($popup->popupname, $view_name);
 			$n++;
 		}
 		$this->view_data['n']= $n;

@@ -54,10 +54,10 @@
 			
 		<?php
 			for ($i=1;$i<$n;$i++){
-				echo $iconname[$i];
-				echo $markername[$i];
-				echo $popupname[$i];
- 				echo $bindpopup[$i]; 
+				echo !empty($iconname[$i])? $iconname[$i] : '';
+				echo !empty($markername[$i]) ? 	$markername[$i] : '';
+				echo !empty($popupname[$i]) ? 	$popupname[$i] : '';
+ 				echo !empty($bindpopup[$i]) ? 	$bindpopup[$i] : ''; 
 			}
 		?>
 		 map.on('click', function(e) { alert("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng) }) 

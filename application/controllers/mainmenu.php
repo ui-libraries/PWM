@@ -7,8 +7,8 @@ class Mainmenu extends CI_Controller {
 	
 	public function __construct () {
 		parent::__construct();
-		$this->load->model('menus');
-		$this->view_data['main_menu'] = $this->menus->build_menu(100);
+		$this->load->model('m_menus');
+		$this->view_data['main_menu'] = $this->m_menus->build_menu(100);
 
 	}
 

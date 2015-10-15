@@ -30,7 +30,9 @@
                                 <i>files to be loaded, must be located in <?php echo FCPATH."resources/csv/"; ?></i>
                             </li>
 
-                            <li><a href ="admin/add_edit_popup">Add/Edit Popups</a><br />
+                            <li><a href ="popups/add_edit_popup">Add/Edit Popups</a><br />
+                            </li>
+                            <li><a href ="popups/search_popup">Manage Popups</a><br />
                             </li>
 
                         </ul>

@@ -1,5 +1,5 @@
 <?php
-class Markers extends CI_model {
+class M_markers extends CI_model {
 	
 	//table fields as attributes
 	public $id;

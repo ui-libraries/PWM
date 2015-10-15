@@ -27,7 +27,10 @@
                 </div>
             </div>
             
-		    <?php echo form_open ('admin/add_edit_popup', array('class'=>'form-horizontal')); ?>
+		    <?php 
+				echo form_open ('popups/add_edit_popup', array('class'=>'form-horizontal')); 
+				echo form_hidden('popup_view_id',$popups_view->id);
+			?>
 
 		    <div class="clearboth">
 			    <div class="col-sm-1"></div>
@@ -45,7 +48,7 @@
 			        		'name' => 'markername', 
 			        		'id'=>'markername', 
 			        		'class'=>'form-control',  
-			        		'value' => $markers->markername
+			        		'value' => $marker->markername
 			        	);
 						echo form_input($options); 
 					?>
@@ -61,7 +64,7 @@
 			        		'name' => 'coords', 
 			        		'id'=>'coords', 
 			        		'class'=>'form-control',  
-			        		'value' => $markers->coords
+			        		'value' => $marker->coords
 			        	);
 						echo form_input($options); 
 					?>
@@ -77,7 +80,7 @@
 			        		'name' => 'layergroup', 
 			        		'id'=>'layergroup', 
 			        		'class'=>'form-control',  
-			        		'value' => $markers->layergroup
+			        		'value' => $marker->layergroup
 			        	);
 						echo form_input($options); 
 					?>
@@ -93,12 +96,32 @@
 					        'area'=>'area'
 				        );
 
-				        $selected = array($markers->markertype);
+				        $selected = array($marker->markertype);
 				        $extras = "'id'='markertype 'class='form-control'";
 						echo form_dropdown('markertype', $markertypes, $selected, $extras); 
 					?>
 		    	</div>
 		  	</div>
+
+		    <div class="form-group">
+			    <label for="storyview" class="col-sm-4 control-label">Story View</label>
+				<div class="col-sm-6">
+			        <?php
+			        	$options = array(
+				        	'type'=>'text', 
+			        		'name' => 'storyview', 
+			        		'id'=>'storyview', 
+			        		'class'=>'form-control',  
+			        		'placeholder'=>"harrison",
+							'value' => $popups_view->viewname
+			        		
+			        	);
+						echo form_input($options); 
+					?>
+		    	</div>
+		  	</div>
+
+
 
 		    <div class="clearboth">
 		  		<div class="col-sm-1"></div>
@@ -116,7 +139,7 @@
 			        		'name' => 'iconname', 
 			        		'id'=>'iconname', 
 			        		'class'=>'form-control',  
-			        		'value' => $markers->coords
+			        		'value' => $icon->iconname
 			        	);
 						echo form_input($options); 
 					?>
@@ -132,7 +155,7 @@
 			        		'name' => 'icondesc', 
 			        		'id'=>'icondesc', 
 			        		'class'=>'form-control',  
-			        		'value' => $icons->description
+			        		'value' => $icon->description
 			        	);
 						echo form_input($options); 
 					?>
@@ -149,7 +172,7 @@
 			        		'id'=>'iconurl', 
 			        		'class'=>'form-control',
 			        		'placeholder'=>"harrison/popups/LoganIcon.png",
-			        		'value' => $icons->iconurl
+			        		'value' => $icon->iconurl
 			        	);
 						echo form_input($options); 
 					?>
@@ -165,7 +188,7 @@
 			        		'name' => 'iconsize_x', 
 			        		'id'=>'iconsize_x', 
 			        		'class'=>'form-control', 
-			        		'value' => $icons->iconsize_x
+			        		'value' => $icon->iconsize_x
 			        	);
 						echo form_input($options); 
 					?>
@@ -178,7 +201,7 @@
 			        		'name' => 'iconsize_y', 
 			        		'id'=>'iconsize_y', 
 			        		'class'=>'form-control', 
-			        		'value' => $icons->iconsize_y
+			        		'value' => $icon->iconsize_y
 			        	);
 						echo form_input($options); 
 					?>
@@ -202,7 +225,7 @@
 			        		'name' => 'popup_name', 
 			        		'id'=>'popup_name', 
 			        		'class'=>'form-control',  
-			        		'value' => $popups->popupname
+			        		'value' => $popup->popupname
 			        	);
 						echo form_input($options); 
 					?>
@@ -219,7 +242,7 @@
 			        		'name' => 'popup_max_width', 
 			        		'id'=>'popup_max_width', 
 			        		'class'=>'form-control', 
-			        		'value' => $popups->maxwidth
+			        		'value' => $popup->maxwidth
 			        	);
 						echo form_input($options); 
 					?>
@@ -232,7 +255,7 @@
 			        		'name' => 'popup_min_width', 
 			        		'id'=>'popup_min_width', 
 			        		'class'=>'form-control', 
-			        		'value' => $popups->minwidth
+			        		'value' => $popup->minwidth
 			        	);
 						echo form_input($options); 
 					?>
@@ -249,7 +272,7 @@
 			        		'name' => 'popup_title_text', 
 			        		'id'=>'popup_title_text', 
 			        		'class'=>'form-control', 
-			        		'value' => $popups_content->title
+			        		'value' => $popup_content->title
 			        	);
 						echo form_input($options); 
 					?>
@@ -265,7 +288,7 @@
 			        		'name' => 'popup_subtitle_text', 
 			        		'id'=>'popup_subtitle_text', 
 			        		'class'=>'form-control', 
-			        		'value' => $popups_content->subtitle
+			        		'value' => $popup_content->subtitle
 			        	);
 						echo form_input($options); 
 					?>
@@ -282,7 +305,7 @@
 			        		'id'=>'popup_imageurl', 
 			        		'class'=>'form-control', 
 			        		'placeholder'=>"harrison/popups/LoganPopup.png",
-			        		'value' => $popups_content->imageurl
+			        		'value' => $popup_content->imageurl
 
 			        	);
 						echo form_input($options); 
@@ -299,7 +322,7 @@
 			        		'name' => 'popup_body', 
 			        		'id'=>'popup_body', 
 			        		'class'=>'form-control', 
-			        		'value' => $popups_content->body
+			        		'value' => $popup_content->body
 
 			        	);
 						echo form_textarea($options); 
@@ -318,7 +341,7 @@
 			        		'id'=>'popup_buttontext', 
 			        		'class'=>'form-control', 
 			        		'placeholder'=>"Go To Story",
-			        		'value' => $popups_content->buttontxt
+			        		'value' => $popup_content->buttontxt
 			        	);
 						echo form_input($options); 
 					?>
@@ -335,7 +358,7 @@
 			        		'id'=>'popup_storyurl', 
 			        		'class'=>'form-control', 
 			        		'placeholder'=>"home/story/harrison/Logan1999",
-			        		'value' => $popups_content->buttonurl
+			        		'value' => $popup_content->buttonurl
 			        	);
 						echo form_input($options); 
 					?>

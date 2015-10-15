@@ -1,5 +1,5 @@
 <?php
-class Icons extends CI_model {
+class M_icons extends CI_model {
 	//table fields as attributes
 	public $id;
 	public $iconname;
