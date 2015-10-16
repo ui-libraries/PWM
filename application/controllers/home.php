@@ -52,16 +52,6 @@ class Home extends CI_Controller {
 		$this->view_data['lng'] = $menu_view->view_center_lng;
 		$this->view_data['zoom'] = $menu_view->view_zoom;
 		
-/*
-		$this->local_menu_id = $menu_id;
-		$this->view_data['local_menu_id'] = (!empty($this->local_menu_id))? $this->local_menu_id : 0 ;
-		if (!empty($this->local_menu_id)) {
-			$this->view_data['local_menu'] = $this->m_menus->build_menu($this->local_menu_id);
-		} else {
-			$this->view_data['local_menu']=""; //initialize so unset variable does not create a problem in the view
-		}
-*/
-
 		$query_popups = $this->m_popups->get_popups($view_name);
 		$n=1;
 		foreach ($query_popups->result() as $popup) {
@@ -72,7 +62,7 @@ class Home extends CI_Controller {
 			$this->view_data["markername"][$n] = $this->m_popups->build_marker($popup->marker_id);
 			$this->view_data["popupname"][$n] = $this->m_popups->build_popup($popup->popup_id);
 			//$this->view_data["bindpopup"][$n] = $popup->markername.".bindPopup(".$popup->popupname.");";
-			$this->view_data["bindpopup"][$n] = $this->m_popups->bind_popup($popup->popupname, $view_name);
+			$this->view_data["bindpopup"][$n] = $this->m_popups->bind_popup($popup->view_id, $view_name);
 			$n++;
 		}
 		$this->view_data['n']= $n;

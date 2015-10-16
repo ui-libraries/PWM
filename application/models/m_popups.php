@@ -29,13 +29,13 @@ class M_popups extends CI_model {
     }
     
     function get_popups($view){
-    	$sql = "SELECT popups_icons.id AS icon_id, popups_icons.iconname AS iconname, popups_icons.iconurl AS iconurl,
+    	$sql = "SELECT popups_views.id AS view_id, popups_icons.id AS icon_id, popups_icons.iconname AS iconname, popups_icons.iconurl AS iconurl,
 					popups_markers.id AS marker_id, popups_markers.markername,
 					popups.id AS popup_id, popups.popupname AS popupname 
 				FROM popups_views
-					JOIN popups_icons ON popups_views.iconname = popups_icons.iconname
-					JOIN popups_markers ON popups_views.markername = popups_markers.markername
-					JOIN popups ON popups_views.popupname = popups.popupname
+					JOIN popups_icons ON popups_views.f_icon_id = popups_icons.id
+					JOIN popups_markers ON popups_views.f_marker_id = popups_markers.id
+					JOIN popups ON popups_views.f_popup_id = popups.id
 				WHERE popups_views.viewname = '".$view."'";
     	$query = $this->db->query($sql);
     	return $query;
@@ -170,16 +170,37 @@ class M_popups extends CI_model {
 		
 	}
 	
-	function bind_popup($popupname, $viewname ) {
-		$this->db->where('popupname', $popupname);
-		$this->db->where('viewname', $viewname);
+	function bind_popup($popups_view_id, $viewname ) {
+		$query=$this->db->get_where('popups_views', array('id' => $popups_view_id));
+		$popups_view = $query->row();
+
+		$query = $this->db->select('popupname')
+						->from('popups')
+						->where('id', $popups_view->f_popup_id)
+						->get();
+		$result=$query->row();				
+		$popupname = $result->popupname;
+		
+		$query = $this->db->select('markername')
+						->from('popups_markers')
+						->where('id', $popups_view->f_marker_id)
+						->get();
+		$result=$query->row();				
+		$markername = $result->markername;
+
+/*
+		$this->db->where('id', $popup_id);
+		$this->db->where('viewname', $viewname);		
 		$query = $this->db->get('popups_views');
 		$row=$query->row();
-		if (strlen($row->offset_x)>0 && strlen($row->offset_y)>0) {
-			$bindstr = "var offset_xy = L.point(".$row->offset_x.",".$row->offset_y.");";
-			$bindstr .= $row->markername.".bindPopup(".$popupname.", {offset:offset_xy});";
+*/
+		
+		
+		if (strlen($popups_view->offset_x)>0 && strlen($popups_view->offset_y)>0) {
+			$bindstr = "var offset_xy = L.point(".$popups_view->offset_x.",".$popups_view->offset_y.");";
+			$bindstr .= $markername.".bindPopup(".$popupname.", {offset:offset_xy});";
 		} else {
-			$bindstr = $row->markername.".bindPopup(".$popupname.");";			
+			$bindstr = $markername.".bindPopup(".$popupname.");";			
 		}
 		return $bindstr;
 	}
