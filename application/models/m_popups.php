@@ -126,7 +126,7 @@ class M_popups extends CI_model {
 	    	}
 	    	if (strlen($optionStr)>0) {$optionStr = substr($optionStr,0,-2);}
 	    	
-	    	$popupcontent = $this->build_content($row->popupname);
+	    	$popupcontent = $this->build_content($row->id);
 
 	    	$popupStr = "var ".$row->popupname." = L.popup(";
 			$popupStr .= (!empty($optionStr)) ? "{\n$optionStr\n}" : '';
@@ -139,11 +139,11 @@ class M_popups extends CI_model {
 	    return $popupStr;	
 	}
 	
-	function build_content($popupname) {
-		$sql = "SELECT id, popupname, title, subtitle, body, imageurl, buttontxt, buttonurl
-				FROM popups_content
-				WHERE popupname = '".$popupname."'";
-		$query = $this->db->query($sql);
+	function build_content($popup_id) {
+		$query = $this->db->select('id,title,subtitle,body,imageurl,buttontxt,buttonurl')
+						->from('popups_content')
+						->where('f_popups_id',$popup_id)
+						->get();
 		$row = $query->row();
 		
 		$buildstr = "";
@@ -216,7 +216,6 @@ class M_popups extends CI_model {
 	        $query = $this->db->query($sql);
 			$result .= $this->db->affected_rows()." record(s) loaded into $table table from $table.csv<br /><br />";
         }
-        //fred ($result,"result");
         return $result;  
     }
 

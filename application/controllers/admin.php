@@ -22,7 +22,6 @@ class Admin extends CI_Controller {
 			   $this->load->view('v_status', $data);
 			} else {
 	            $data['status_msg'] = "Uploaded ".$this->upload->data('file_name')."<br />";
-//fred ($data,"data");
 				$this->load->view('v_status', $data);
             }
             //$this->m_menus->upload_excel();

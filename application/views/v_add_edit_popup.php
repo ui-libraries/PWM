@@ -28,7 +28,7 @@
             </div>
             
 		    <?php 
-				echo form_open ('popups/add_edit_popup', array('class'=>'form-horizontal')); 
+				echo form_open ('popups/save', array('class'=>'form-horizontal')); 
 				echo form_hidden('popup_view_id',$popups_view->id);
 			?>
 

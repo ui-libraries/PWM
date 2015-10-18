@@ -24,7 +24,9 @@ class M_popups_views extends CI_model {
     public function fetch_list($limit=25, $start=0) {
 		$this->db->select('popups_views.id, markername, viewname, iconurl')
 					->from('popups_views')
-					->join ('popups_icons', 'popups_views.f_icon_id = popups_icons.id', 'left');
+					->join ('popups_icons', 'popups_views.f_icon_id = popups_icons.id', 'left')
+					->join ('popups_markers', 'popups_views.f_marker_id = popups_markers.id','left');
+					
 		if (!empty($this->searchval)) {
 			$this->db->like('markername', $this->searchval)
 					->or_like ('viewname',$this->searchval);
