@@ -17,7 +17,12 @@ class Popups extends CI_Controller {
      
     public function add_edit_popup() {
 		
-		$query = $this->db->get_where('popups_views', array('id' => $this->input->post('popup_view_id')));
+		if ($this->input->post('addnew')) {
+			$popup_view_id = $this->save();
+			$query = $this->db->get_where('popups_views', array('id' => $popup_view_id));
+		} else {
+			$query = $this->db->get_where('popups_views', array('id' => $this->input->post('popup_view_id')));
+		}
 		$popups_view = $query->row();
 		
 		$query = $this->db->get_where('popups', array('id' => $popups_view->f_popup_id));
@@ -38,8 +43,7 @@ class Popups extends CI_Controller {
 		$data['marker']= $marker;
 		$data['icon']= $icon;
 		$data['popup_content']= $popup_content;
-		
-        $this->load->view('v_add_edit_popup', $data);
+		$this->load->view('v_add_edit_popup', $data);	
     }
     
     public function save() {
@@ -54,19 +58,19 @@ class Popups extends CI_Controller {
 			$this->db->replace('popups_views', $popup_view);			
 	    } else {
 	    	$add = true;
-			$this->db->insert('popups_markers');
+			$this->db->insert('popups_markers', array('id'=>Null));
 			$popup_marker_id = $this->db->insert_id();
 
-			$this->db->insert('popups_icons');
+			$this->db->insert('popups_icons', array('id'=>Null));
 			$popup_icon_id = $this->db->insert_id();
 			
-			$this->db_insert('popups');
+			$this->db->insert('popups', array('id'=>Null));
 			$popup_id = $this->db->insert_id();
 			
-			$this->db->insert('popups_content');
+			$this->db->insert('popups_content', array('id'=>Null));
 			$popup_content_id = $this->db->insert_id();
 			
-		    $this->db->insert('popups_views');
+		    $this->db->insert('popups_views', array('id'=>Null));
 		    $popup_view_id = $this->db->insert_id();
 			$query=$this->db->get_where('popups_views', array('id' => $popup_view_id));
 			$popup_view = $query->row();
@@ -76,6 +80,7 @@ class Popups extends CI_Controller {
 			$popup_view->f_popup_id = $popup_id;
 			$popup_view->f_content_id = $popup_content_id;
 			$this->db->replace('popups_views',$popup_view);
+			return ($popup_view_id);
 		}
 			
 		$query=$this->db->get_where('popups_markers', array('id' => $popup_view->f_marker_id));

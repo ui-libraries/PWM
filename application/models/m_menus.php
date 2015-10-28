@@ -8,6 +8,35 @@
  * @author mneucoll
  */
 class M_menus extends CI_model {	
+
+        private $fieldmap = array(
+        	'menus'=> array (
+	        	'id'=>'id',
+	        	'css_id'=>'css_id',
+	        	'menu_desc'=>'menu_desc',
+	        	'css_class'=>'css_class',
+	        	'sort' => 'sort'
+	        ),
+	        'menus_views' => array (
+				'id'=>'id' ,
+				'menu_id'=>'menu_id',
+				'view_name'=>'view_name',
+				'view_center_lat'=>'view_center_lat',
+				'view_center_lng'=>'view_center_lng',
+				'view_zoom'=>'view_zoom'
+			),
+			'menu_items' => array (
+				'id'=>'id',
+				'menu_id' =>'menu_id',
+				'child_of'=>'child_of',
+				'sort'=>'sort',
+				'menu_item_text'=>'menu_item_text',
+				'menu_item_desc'=>'menu_item_desc',
+				'url'=>'url',
+				'target'=>'target',
+				'css_class'=>'css_class'
+			)
+		);
 	
     public function __construct() {
         // Call the Model constructor
@@ -34,19 +63,16 @@ class M_menus extends CI_model {
 			} else {
 				//proc the excel file
 				$uploadedfilename = $GLOBALS['_FILES']['userfile']['name'];
-				$filename = $this->config['upload_path'] . $this->$config['file_name'];
-
-				$msg = $this->importXLS($filename);
-				
+				$filename = $this->upload->data('file_path').$this->upload->data('file_name');
 				if (!empty($msg)){ //importXLS returned an error message
 					$data['errmsg']= "Error in $uploadedfilename:<br /> $msg <br /> Upload incomplete";
 					$data['msg']= '';
 				} else { //empty msg so far, importXLS was successful
-					$data['msg'] .= "$uploadedfilename: excel file loaded <br />";
-					$data['msg'] .= $this->processed; 
+					$data['msg'] .= "$uploadedfilename: excel file loaded <br /> <br />";
+					$data['msg'] .= $this->load_menus($filename);
+ 
 					$data ['errmsg'] = '';
 				}
-				
 				$msg = (!empty($data['errmsg'])) ? $data['errmsg'] : $data['msg'];
 				$sql = "INSERT INTO `menus_import_log` ( `msg`) VALUES (".$this->db->escape($msg).")";
 				$query=$this->db->query($sql);
@@ -55,6 +81,72 @@ class M_menus extends CI_model {
 	    $this->load->view('v_menus_upload', $data);
 	}
     
+
+	public function load_menus($filename) {		
+        $this->load->library('phpexcel/PHPExcel');
+		$inputFileName = $filename;
+		$inputFileType = PHPExcel_IOFactory::identify($inputFileName);
+		$objReader = PHPExcel_IOFactory::createReader($inputFileType);
+		$objPHPExcel = $objReader->load($inputFileName);
+		$result = "";
+		
+		foreach ($objPHPExcel->getWorksheetIterator() as $worksheet) {
+			$added = 0;
+			unset($insertFields); 
+			unset($insertData); 
+
+            $worksheetTitle = $worksheet->getTitle();
+            if (array_key_exists($worksheetTitle, $this->fieldmap)){
+				$admindb = $this->load->database('admin', TRUE);
+				$admindb->truncate($worksheetTitle);
+				$result .= $worksheetTitle." table truncated.  ";
+				$sheet = $objPHPExcel->setActiveSheetIndexByName($worksheetTitle);
+
+				$firstblank = 0;
+				$rowNum = 0;
+				while(empty($firstblank)) {
+					$cellVal = $sheet->getCellByColumnAndRow('A', $rowNum)->getValue();
+					if (empty($cellVal)) {
+						$firstblank = $rowNum;
+					}
+					$rowNum++;
+				}
+		        $highestRow = --$firstblank;        
+		        $highestColumn = $sheet->getHighestColumn();
+		
+				$rangeArray = $sheet->rangeToArray('A1' . ':' . $highestColumn . '1', NULL, TRUE, FALSE);
+				$columnNames = $rangeArray[0];
+				
+				foreach($columnNames as $key=>$columnName) {
+					$fieldName = array_search($columnName,$this->fieldmap[$worksheetTitle]);
+					if ($fieldName !==false){
+						$insertFields[$key] =$fieldName; 
+					}
+				}
+//fred ($insertFields, "insertFields");
+				for ($row = 2; $row <= $highestRow; $row++){ 
+	                //  Read a row of data into an array
+	                $rangeArray = $sheet->rangeToArray('A' . $row . ':' . $highestColumn . $row, NULL, TRUE, FALSE);
+	                $rowData = $rangeArray[0];
+	                //build activerecord insert/update array
+	       
+	                foreach ($rowData as $key=>$cellValue) {
+		                if (key_exists($key, $insertFields)) {
+			                $dbField = $insertFields[$key];
+			                $insertData[$dbField]=$cellValue;
+			            }
+			        }
+	                //insert/update array has been populated
+	                //search for a mrn/surg_date match
+		            $this->db->insert ($worksheetTitle,$insertData);
+		            $added ++;
+				}
+			}
+			$result .= "added ".$added." new records <br /><br />";
+		}
+		return ($result);
+	}
+
     public function load_csv() {
         $this->query->truncate('menus');
         $result = "menus tables truncated<br />";

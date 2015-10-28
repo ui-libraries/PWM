@@ -23,16 +23,19 @@
                 <div id="contentcolumn">
                     <div class="innertube">
                         <ul>
-                            <li><a href ="admin/import_menu">Load Menu CSV files</a><br />
-                                <i>files to be loaded, 'menus.csv' and 'menus_items.csv' must be located in <?php echo base_url("/resources/csv/"); ?></i>
+                            <li><a href ="admin/import_menu">Load Menu Excel Sheets</a><br />
                             </li>
+<!--
                             <li><a href ="admin/import_popups">Load Popups CSV files</a><br />
                                 <i>files to be loaded, must be located in <?php echo FCPATH."resources/csv/"; ?></i>
+-->
                             </li>
 
                             <li><a href ="popups/add_edit_popup">Add/Edit Popups</a><br />
                             </li>
                             <li><a href ="popups/search_popup">Manage Popups</a><br />
+                            </li>
+                            <li><a href ="image_manager">Manage Images</a><br />
                             </li>
 
                         </ul>

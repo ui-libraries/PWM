@@ -16,15 +16,7 @@ class Admin extends CI_Controller {
     public function import_menu(){
         $this->load->model('m_menus');
         if ($this->input->post('upload')){
-            $do_upload = $this->m_menus->do_upload('userfile');
-            if (!$do_upload) {
-               $data['error_msg'] = "<strong>Error!</strong>".$this->upload->display_errors();
-			   $this->load->view('v_status', $data);
-			} else {
-	            $data['status_msg'] = "Uploaded ".$this->upload->data('file_name')."<br />";
-				$this->load->view('v_status', $data);
-            }
-            //$this->m_menus->upload_excel();
+	        $this->m_menus->upload_excel();
         } elseif ($this->input->post('return')) {
             redirect('admin');
         } elseif ($this->input->post('map')) {
@@ -34,9 +26,9 @@ class Admin extends CI_Controller {
         }
     }
 
-        public function getinfo() {
-	         $this->load->view('v_getinfo');
-        }
+    public function getinfo() {
+         $this->load->view('v_getinfo');
+    }
         
 /*
         public function search_popup() {

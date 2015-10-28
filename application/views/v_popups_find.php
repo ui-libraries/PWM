@@ -1,20 +1,7 @@
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Peoples Weather Map -- Popups</title>
-        
-        <?php 
-            echo link_tag('resources/css/style.css');
-			include ('includes/jquery_head.incl');
-	        echo "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\">";
-			echo "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css\">";
-			//add custom bootstrap css ovrerride
-			$fileinfo = get_file_info('css/bootstrap_custom.css','date');
-			$d=$fileinfo['date'];
-			echo link_tag ("css/bootstrap_custom.css?d={$d}");
-			echo "<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js\"></script> ";
-		?>
-    </head>
+<?php 
+	$page_title = "PWM - Manage Popups";
+	include('includes/admin_head.incl'); 
+?>
     <body>
 	    
         <div id="container">

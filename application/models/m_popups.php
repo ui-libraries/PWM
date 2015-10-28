@@ -169,7 +169,7 @@ class M_popups extends CI_model {
 		return $buildstr;
 		
 	}
-	
+
 	function bind_popup($popups_view_id, $viewname ) {
 		$query=$this->db->get_where('popups_views', array('id' => $popups_view_id));
 		$popups_view = $query->row();
