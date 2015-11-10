@@ -31,11 +31,13 @@
 -->
                             </li>
 
-                            <li><a href ="popups/add_edit_popup">Add/Edit Popups</a><br />
+                            <li><a href ="image_manager">Manage Images</a><br />
+                            </li>
+                            <li><a href ="image_manager/build_library">Rebuild Image Library</a><br />
                             </li>
                             <li><a href ="popups/search_popup">Manage Popups</a><br />
                             </li>
-                            <li><a href ="image_manager">Manage Images</a><br />
+                            <li><a href ="#">Manage Stories</a><br />
                             </li>
 
                         </ul>

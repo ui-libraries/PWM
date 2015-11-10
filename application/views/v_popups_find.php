@@ -3,16 +3,10 @@
 	include('includes/admin_head.incl'); 
 ?>
     <body>
-	    
-        <div id="container">
-            <div id="topsection">
-                <div class="innertube">
-                    <div id="logo">
-                        <img alt="PWM" src="<?php echo resource_url('image/PWM-180.png'); ?>" width="180" height="56">
-                        <div class="tagline"> The Peoples Weather Map</div>
-                    </div>
-                </div>
-            </div>
+<?php
+	include ('includes/page_head.incl');
+?>	
+
             <div class="vspacer"></div>
 			<div class="row info">
 					<div class="col-sm-1"></div>

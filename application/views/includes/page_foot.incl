@@ -1,6 +1,6 @@
             <div id="footer">
                 Peoples Weather Map. Page rendered in <strong>{elapsed_time}</strong> seconds 
             </div>
-        </div>
+        </div> 
     </body>
 </html>
