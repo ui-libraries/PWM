@@ -76,7 +76,7 @@
 		?>
 		
 	
-	<table class="table col-sm-offset-1" style="width:80%;">
+	<table class="table col-sm-offset-1" style="width:83%;">
 		<caption><?php echo !empty($links)? $links: ''; ?></caption>
 		<thead>
             <th>Thumbnail</th>

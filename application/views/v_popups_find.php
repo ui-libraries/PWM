@@ -36,26 +36,28 @@
 			</div>
 			<div class="row"><hr /></div>
 			<div>
-					<table class="table">
-						<thead>
-							<tr><th>View</th><th>Marker</th><th>Icon</th></tr>
-						</thead>
-						<?php foreach ($fetchlist as $row): ?>
-							<tr>
-								<td><?php echo $row->viewname; ?></td>
-								<td><?php echo $row->markername; ?></td>
-								<td><?php echo "<img src='".image_url($row->iconurl)."'>"; ?></td>
-								<td>
-									<?php
-									echo form_open('popups/add_edit_popup', array('class' => 'form-inline', 'role'=>'form'));
-									echo form_hidden('popup_view_id',  $row->id);
-									echo form_submit('edit', 'Edit', 'class="btn btn-primary"');
-									echo form_close();
-									?>
-								</td>
-							</tr>								
-						<?php endforeach; ?>
-					</table>
+				<table class="table col-sm-offset-1" style="width:83%;">
+					<thead>
+						<tr><th>View</th><th>Marker</th><th>Icon</th></tr>
+					</thead>
+					<tbody>
+					<?php foreach ($fetchlist as $row): ?>
+						<tr>
+							<td><?php echo $row->viewname; ?></td>
+							<td><?php echo $row->markername; ?></td>
+							<td><?php echo "<img src='".image_url($row->iconurl)."'>"; ?></td>
+							<td>
+								<?php
+								echo form_open('popups/add_edit_popup', array('class' => 'form-inline', 'role'=>'form'));
+								echo form_hidden('popup_view_id',  $row->id);
+								echo form_submit('edit', 'Edit', 'class="btn btn-primary"');
+								echo form_close();
+								?>
+							</td>
+						</tr>								
+					<?php endforeach; ?>
+					</tbody>
+				</table>
 			</div>
         </div>
     </body>

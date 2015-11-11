@@ -81,20 +81,23 @@
 			</div>
 		    
 		    <div class="form-group row">
-			    <div class="col-sm-5">  				            
-					<input type="file" name="userfile" id = "userfile" size="30" class="btn btn-default form-control" />
+			    <div class="col-sm-5">
+				    <input type="file" class = "btn btn-default" name="userfile" size="20" />
+			    </div>
+		    </div>
+		    
+		    <div class="form-group row">
+			    <div class="col-sm-3">		
+					<?php
+						$formextras = array ('class' => 'btn btn-default', 'style' => 'width:275px');
+						echo form_submit('upload','Upload',$formextras); 
+					?>
 			    </div>
 		    </div>
 		    
 		    <div class="form-group row">
 			    <div class="col-sm-3">  				            
-					<?php echo form_submit('upload','Upload'); ?>
-			    </div>
-		    </div>
-		    
-		    <div class="form-group row">
-			    <div class="col-sm-3">  				            
-					<?php echo form_submit('return','Return to Image Manager'); ?>
+					<?php echo form_submit('return','Return to Image Manager',$formextras); ?>
 			    </div>
 		    </div>
 		    
