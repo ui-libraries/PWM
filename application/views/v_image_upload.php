@@ -42,18 +42,20 @@
 		</div>
 
 		<div>
+			
 		    <div class="form-group row">
 			    <label class="control-label col-sm-2" for="countyname">County Name:</label>
-			    <div class="col-sm-3">          
-					<?php 
+			    <div class="col-sm-3">
+					<?php echo form_dropdown('county', $counties, '0'); ?>						
+<!--
 						$data = array(
-							'name'	=> 'countyname',
-							'id'	=> 'countyname',
+							'name'	=> 'county',
+							'id'	=> 'county',
 							'class'	=>	'form-control',
 							'placeholder' =>'enter county name'
 						);
 						echo form_input($data);
-					?>
+-->
 			    </div>
 		    </div>
 

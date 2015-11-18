@@ -175,6 +175,13 @@ die;
 				}
 			}
 		}
+		$query=$this->db->get('counties');
+		
+		foreach ($query->result() as $row) {
+			$counties[$row->id]= $row->county;
+		}
+		
+		$this->data['counties'] = $counties;
 		$this->load->view('v_image_upload', $this->data);
 	}
 	
