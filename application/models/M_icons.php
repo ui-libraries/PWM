@@ -16,4 +16,5 @@ class M_icons extends CI_model {
         // Call the Model constructor
         parent::__construct();
     }
+	//
 }
