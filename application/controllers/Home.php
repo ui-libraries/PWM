@@ -70,14 +70,36 @@ class Home extends CI_Controller {
 		$this->load->view('v_county', $this->view_data);
 
 	}
-	
-	public function story($caller,$story) {
+
+    public function story($caller,$story) {
+        /* example http://peoplesweathermap.org/index.php/home/story/lyon/PeopleOnTheMove
+           $caller = 'lyon', $story='PeopleOnTheMove'
+        */
+
+        //load story from mysql story table
+        $this->load->model('m_stories');
+        $this->m_stories->county = $caller;
+        $this->m_stories->story_name = $story;
+
+        $this->view_data['story'] = $this->m_stories->load_story();
+
+        //$this->view_data['story_include'] = "stories/".$caller."/".$story.".php";
+
+        $this->view_data['return'] =$caller;
+        $this->load->view('v_story2',$this->view_data);
+    }
+
+	public function xstory($caller,$story) {
+        /* example http://peoplesweathermap.org/index.php/home/story/lyon/PeopleOnTheMove
+           $caller = 'lyon', $story='PeopleOnTheMove'
+        */
 
 		$this->view_data['story_include'] = "stories/".$caller."/".$story.".php";
 		$this->view_data['return'] =$caller;
 		$this->load->view('v_story',$this->view_data);
-		
 	}
+
+
 	public function tester() {
 		//loads view mapTester for testing functions before implementing on standard maps
 		$this->view_data['local_menu']=""; //initialize so unset variable does not create a problem in the view
