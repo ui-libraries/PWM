@@ -33,7 +33,8 @@ class M_popups_views extends CI_model {
 		}
 		$this->db->limit($limit, $start);
 		
-		$query = $this->db->get();					
+		$query = $this->db->get();
+
         return ($query->num_rows() > 0) ? $query->result() : false;
     }
     

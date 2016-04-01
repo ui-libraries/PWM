@@ -30,6 +30,7 @@ body {
 	color:#4F5155;
 }
 
+
 a {
 	color:#039;
 	background-color:transparent;
@@ -55,6 +56,10 @@ code {
 	display:block;
 	margin:14px 0;
 	padding:12px 10px;
+}
+
+.monospace {
+	font-family:Consolas,Monaco,Courier New,Courier,monospace;
 }
 
 .reversetype {color: white;}
@@ -211,6 +216,10 @@ p.footer {
 
 .spaceleft {
 	margin-left: 20px;
+}
+
+.spaceabove {
+	margin-top: 20px;
 }
 
 .centered {
@@ -455,6 +464,8 @@ way to fit your requirements.
 .heading {
 	font-weight: bold !important;
 }
+
+
 
 /*
 mediaqueries

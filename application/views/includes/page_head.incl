@@ -3,7 +3,7 @@
             <div id="topsection">
                 <div class="innertube">
                     <div id="logo">
-                        <a href= "<?php echo site_url(); ?>" ><img alt="PWM" src="<?php echo resource_url('image/PWM-180.png'); ?>" width="180" height="56"></a>
+                        <a href= "<?php echo site_url("admin"); ?>" ><img alt="PWM" src="<?php echo resource_url('image/PWM-180.png'); ?>" width="180" height="56"></a>
                         <div class="tagline"> The Peoples Weather Map</div>
                     </div>
                     <?php echo !empty($main_menu) ? $main_menu : ''; ?>

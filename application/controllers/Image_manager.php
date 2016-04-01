@@ -53,7 +53,7 @@ class Image_manager extends CI_Controller {
 					'thumb'=> $thumb,
 					'image_name'=> $row->image_name,
 					'image_size'=> $row->image_size,
-					'image_path'=> $image_path
+					'image_path'=> "../../resources/image/$image_path"
 				);
 //fred ($thumb,"thumb");
 //fred ($this->data, "this data");

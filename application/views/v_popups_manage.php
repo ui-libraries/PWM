@@ -8,12 +8,12 @@
 ?>	
 
             <div class="vspacer"></div>
-			<div class="row info">
+			<div class="row info spaceabove">
 					<div class="col-sm-1"></div>
 					<div class="col-sm-4">
 						<?php
 		                echo form_open('popups/search_popup', array('class' => 'form-inline', 'role'=>'form'));
-		                echo form_submit('search', 'Search', 'class="btn btn-primary"');
+		                echo form_submit('search', 'Search / Filter', 'class="btn btn-primary"');
 		                echo "&nbsp;&nbsp;";
 		                echo form_input('searchVal', (!empty($searchVal) ? $searchVal : ""));
 		                echo form_close();
@@ -52,6 +52,12 @@
 								echo form_hidden('popup_view_id',  $row->id);
 								echo form_submit('edit', 'Edit', 'class="btn btn-primary"');
 								echo form_close();
+
+								echo form_open('popups/delete_popup', array('class' => 'form-inline', 'role'=>'form'));
+								echo form_hidden('popup_view_id',  $row->id);
+								echo form_close();
+
+
 								?>
 							</td>
 						</tr>								

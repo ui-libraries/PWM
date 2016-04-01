@@ -79,9 +79,17 @@ class Home extends CI_Controller {
         //load story from mysql story table
         $this->load->model('m_stories');
         $this->m_stories->county = $caller;
-        $this->m_stories->story_name = $story;
+//		$this->m_stories->story_name = $caller."/".$story;
+		$this->m_stories->story_name = $story;
 
-        $this->view_data['story'] = $this->m_stories->load_story();
+		//need storyid
+		$story_id = $this->m_stories->get_story_id();
+        $story=$this->m_stories->load_story($story_id);
+		$story->story_content = str_replace("../../",base_url(),$story->story_content);
+		//<img src="../../resources/image/lyon/PeopleOnTheMove/lyon-nhl-bloodrun.jpg"
+
+//		$this->view_data['story'] = $this->m_stories->load_story($story_id);
+		$this->view_data['story'] = $story;
 
         //$this->view_data['story_include'] = "stories/".$caller."/".$story.".php";
 

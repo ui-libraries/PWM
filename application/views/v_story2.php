@@ -31,17 +31,19 @@
                 if (!empty($story->title)) {echo "<h2>".$story->title."</h2>\n";}
                 if (!empty($story->location)) {echo "<h3>".$story->location."</h3>\n";}
                 if (!empty($story->byline)) {echo "<p class='byline'>".$story->byline."</p>\n";}
-                if (!empty($story->story_content)) {
-                    $storysegments = explode ("||",$story->story_content);
-                    foreach ($storysegments as $storysegment) {
-                        if (substr(trim($storysegment),0, 5) =='image'){
-                            $imagetag = image_url(substr($storysegment,11, -2));
-                            echo $imagetag;
-                        } else {
-                            echo $storysegment;
-                        }
-                    }
-                }
+
+                if (!empty($story->story_content)) {echo $story->story_content;}
+                    
+//                    $storysegments = explode ("||",$story->story_content);
+//                    foreach ($storysegments as $storysegment) {
+//                        if (substr(trim($storysegment),0, 5) =='image'){
+//                            $imagetag = image_url(substr($storysegment,11, -2));
+//                            echo $imagetag;
+//                        } else {
+//                            echo $storysegment;
+//                        }
+//                    }
+//                }
             ?>
             </div>
         </div>
