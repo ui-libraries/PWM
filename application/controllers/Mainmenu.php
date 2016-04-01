@@ -21,6 +21,9 @@ class Mainmenu extends CI_Controller {
 	public function nasa_temp() {
 		$this->load->view('nasa_1820_2011', $this->view_data);
 	}
+	public function gottschalk_book() {
+		$this->load->view('gottschalk_book', $this->view_data);
+	}
 
 }
 	
