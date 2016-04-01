@@ -24,7 +24,8 @@
 					echo "image_type: ".$upload_data['image_type']."<br />";
 					echo "image_size: ".$upload_data['image_size_str']."<br />";
 					$thumb_name = $upload_data['raw_name']."_thumb".$upload_data['file_ext'];
-					echo img("$thumb_url/$thumb_name");
+					
+					
 				}
 			}
 			echo form_open_multipart('image_manager/uploadimage');
