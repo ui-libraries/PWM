@@ -133,7 +133,7 @@ class M_menus extends CI_model {
 	                foreach ($rowData as $key=>$cellValue) {
 		                if (key_exists($key, $insertFields)) {
 			                $dbField = $insertFields[$key];
-			                $insertData[$dbField]=$cellValue;
+			                $insertData[$dbField]= ($cellValue=="NULL" ? null : $cellValue);
 			            }
 			        }
 	                //insert/update array has been populated
@@ -147,7 +147,7 @@ class M_menus extends CI_model {
 		return ($result);
 	}
 
-    public function load_csv() {
+    public function xload_csv() {
         $this->query->truncate('menus');
         $result = "menus tables truncated<br />";
 
@@ -175,36 +175,60 @@ class M_menus extends CI_model {
         $menustr = "<div id = '".$query->row()->css_id."' class = '".$query->row()->css_class."'>\n";
         $menustr .= "<ul id = 'level1_menu_".$menu_id."'>\n ";
         
-        $sql = "SELECT id, menu_id, menu_item_text, url, target, css_class 
-                FROM menu_items 
-                WHERE menu_id = $menu_id 
-                    AND child_of IS NULL 
-                ORDER BY sort ASC";
-        $level1 = $this->db->query($sql);
+//        $sql = "SELECT id, menu_id, menu_item_text, url, target, css_class
+//                FROM menu_items
+//                WHERE menu_id = $menu_id
+//                    AND child_of IS NULL
+//                ORDER BY sort ASC";
+//		$level1 = $this->db->query($sql);
+
+		$level1 = $this->db->select ('id, menu_id, menu_item_text, url, target, css_class')
+			->from('menu_items')
+			->where('menu_id',$menu_id)
+			->where ('child_of', null)
+			->order_by('sort')
+			->get();
+
+		$sql = $this->db->last_query();
+
         if ($level1->num_rows() > 0){
             foreach ($level1->result() as $level1_row){
                 $menustr .= $this->build_menu_item($level1_row);
-                
-                $sql = "SELECT id, menu_id, menu_item_text, url, target, css_class 
-                        FROM menu_items 
-                        WHERE menu_id = $menu_id
-                            AND child_of = ".$level1_row->id.
-                        " ORDER BY sort ASC" ;
-		
-		
-				
-                $level2 = $this->db->query($sql);
+
+
+//                $sql = "SELECT id, menu_id, menu_item_text, url, target, css_class
+//                        FROM menu_items
+//                        WHERE menu_id = $menu_id
+//                            AND child_of = ".$level1_row->id.
+//                        " ORDER BY sort ASC" ;
+//
+//                $level2 = $this->db->query($sql);
+
+				$level2 = $this->db->select('id, menu_id, menu_item_text, url, target, css_class')
+					->from('menu_items')
+					->where ('menu_id', $menu_id)
+					->where ('child_of',$level1_row->id )
+					->order_by ('sort')
+					->get();
                 
                 if ($level2->num_rows() > 0){
                     $menustr .= "<ul id = 'level2_menu_".$level1_row->id."'>\n ";
                     foreach ($level2->result() as $level2_row){
                         $menustr .= $this->build_menu_item($level2_row);
-                        $sql = "SELECT id, menu_id, menu_item_text, url, target, css_class 
-                                FROM menu_items 
-                                WHERE menu_id = $menu_id
-                                    AND child_of = ".$level2_row->id.
-                                " ORDER BY sort ASC" ;
-                        $level3 = $this->db->query($sql);
+
+//                        $sql = "SELECT id, menu_id, menu_item_text, url, target, css_class
+//                                FROM menu_items
+//                                WHERE menu_id = $menu_id
+//                                    AND child_of = ".$level2_row->id.
+//                                " ORDER BY sort ASC" ;
+//                        $level3 = $this->db->query($sql);
+						$level3 = $this->db->select ('id, menu_id, menu_item_text, url, target, css_class')
+							->from('menu_items')
+							->where ('menu_id',$menu_id)
+							->where ('child_of', $level2_row->id)
+							->order_by('sort')
+							->get();
+
                         if ($level3->num_rows() > 0){
                             $menustr .= "<ul id = 'level3_menu_".$level2_row->id."'>\n ";
                             foreach ($level3->result() as $level3_row){
@@ -237,13 +261,13 @@ class M_menus extends CI_model {
 			$url=$row->url;
 			}
         $menu_item = "<li ";
-	    $menu_item .= "class = ";
+	    $menu_item .= "class = '";
         if($row->menu_id!=100){
 			$menu_item .= !empty($row->css_class) ? "{$row->css_class}" : "ui-state-disabled";
         } else {
 			$menu_item .= !empty($row->css_class) ? "{$row->css_class}" : "disabled";
 		}
-		
+		$menu_item .= "'";
         $menu_item .= ">";
         $menu_item .= "<a href='".$url."' ";
         $menu_item .= !empty($row->css_class)? "class = '".$row->css_class."' " : '';
