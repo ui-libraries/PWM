@@ -24,7 +24,7 @@
 					echo "image_type: ".$upload_data['image_type']."<br />";
 					echo "image_size: ".$upload_data['image_size_str']."<br />";
 					$thumb_name = $upload_data['raw_name']."_thumb".$upload_data['file_ext'];
-					echo img("images/survey_img/$thumb_name");
+					echo img("$thumb_url/$thumb_name");
 				}
 			}
 			echo form_open_multipart('image_manager/uploadimage');
@@ -34,7 +34,7 @@
 		<div class="text-info row">
 			<div class="col-sm-8">Naming Conventions:
 				<ul>
-					<li>County Names should be all lower case, e.g. ("cedar")</li>
+<!--					<li>County Names should be all lower case, e.g. ("cedar")</li>-->
 					<li>Image and Story names should be free of spaces and special characters </li>
 					<li>Image names should include an extension (e.g. ".jpg", ".png", ".gif")</li>
 				</ul>
@@ -44,9 +44,12 @@
 		<div>
 			
 		    <div class="form-group row">
-			    <label class="control-label col-sm-2" for="countyname">County Name:</label>
+			    <label class="control-label col-sm-2" for="county">County Name:</label>
 			    <div class="col-sm-3">
-					<?php echo form_dropdown('county', $counties, '0'); ?>						
+					<?php
+						$county = (!empty($county))? $county : 0;
+						echo form_dropdown('county', $counties, $county);
+					?>
 <!--
 						$data = array(
 							'name'	=> 'county',

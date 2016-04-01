@@ -127,7 +127,11 @@ class Image_manager extends CI_Controller {
 		} elseif ($this->input->post('upload')) {
 
 
-			$countyname= $this->input->post('countyname');
+			$county= $this->input->post('county');
+			$query= $this->db->get_where('counties', array('id'=>$county));
+			$countyname = $query->row()->county;
+			
+			
 			$imagetype = $this->input->post('imagetype');
 			$storyname =  $this->input->post('storyname');
 			
@@ -135,7 +139,7 @@ class Image_manager extends CI_Controller {
 			if (empty($countyname)) {
 				$this->data['errmsg'] = "No County specified";
 			} else {
-				$this->relative_path .= $countyname."/";
+				$this->relative_path .= strtolower($countyname)."/";
 			}
 			if ($imagetype == "popup") { 
 				$this->relative_path .= "popups/";
@@ -171,6 +175,7 @@ die;
 						$this->data['upload_data'] = $this->upload->data();
 						$this->create_thumb();
 						$this->insert_imagedb();
+						$this->data['thumb_url'] = base_url($this->relative_path);
 					}
 				}
 			}
