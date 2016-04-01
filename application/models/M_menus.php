@@ -123,8 +123,7 @@ class M_menus extends CI_model {
 						$insertFields[$key] =$fieldName; 
 					}
 				}
-//fred ($insertFields, "insertFields");
-				for ($row = 2; $row <= $highestRow; $row++){ 
+				for ($row = 2; $row <= $highestRow; $row++){
 	                //  Read a row of data into an array
 	                $rangeArray = $sheet->rangeToArray('A' . $row . ':' . $highestColumn . $row, NULL, TRUE, FALSE);
 	                $rowData = $rangeArray[0];

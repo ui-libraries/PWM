@@ -17,7 +17,7 @@ class Admin extends CI_Controller {
         $this->load->model('m_menus');
         if ($this->input->post('upload')){
 	        $this->m_menus->upload_excel();
-	        $this->load->view('v_menus_upload');
+	        //$this->load->view('v_menus_upload');
 
         } elseif ($this->input->post('return')) {
             redirect('admin');
