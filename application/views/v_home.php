@@ -10,6 +10,7 @@
         include ('includes/openLayers_head.incl');
         include ('includes/jquery_head.incl');
 		include('includes/local_menu.incl'); 
+		include('includes/share_button.incl'); 
 	?>
 </head>
 <body onload='init();'>
@@ -21,7 +22,14 @@
     <div id="contentwrapper">
         <div id="leftcolumn">
             <div class="innertube">
-                <?php echo $local_menu ?>
+                <?php 
+                	echo $local_menu;
+                	echo form_open("mainmenu/getinvolved");
+                	$attributes = array('id' => 'share_button' );
+                	echo form_submit('get_involved','Do you have a story to share?', $attributes);
+                	echo form_close();
+                ?>
+
             </div>
         </div>
 

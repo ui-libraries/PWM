@@ -465,6 +465,12 @@ way to fit your requirements.
 	font-weight: bold !important;
 }
 
+#share_button {
+	position: absolute;
+	bottom: 25px;
+	width: 175px;
+	white-space: normal !important;
+}
 
 
 /*

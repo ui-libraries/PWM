@@ -9,13 +9,25 @@
 		//include ('includes/openLayers_head.incl');
 		include ('includes/leaflet_head.incl');
         include ('includes/jquery_head.incl');
-		include('includes/local_menu.incl'); 
+		include('includes/local_menu.incl');
+		include('includes/share_button.incl'); 
      ?>
      
     <!-- remove the pointer on the leaflet popup -->
     <style>
 		 .leaflet-popup-tip-container{visibility:hidden;}
 	</style>
+
+	<script>
+		$(function() {
+		    $( "#share_button" )
+		      	.button()
+		      	.click(function( event ) {
+		        	event.preventDefault();
+		        	window.location.href='<?php echo site_url("mainmenu/getinvolved");?>';
+		    });
+		});
+	</script>
 	
 </head>
 
@@ -28,7 +40,13 @@
 	<div id="contentwrapper">
 	    <div id="leftcolumn">
 	        <div class="innertube">
-	            <?php echo $local_menu ?>
+	            <?php 
+	            	echo $local_menu;
+	            	echo form_open("mainmenu/getinvolved");
+                	$attributes = array('id' => 'share_button' );
+                	echo form_submit('get_involved','Do you have a story to share?', $attributes);
+                	echo form_close();
+	            ?>
 	        </div>
 	    </div>
 	    <div id="contentcolumn">
