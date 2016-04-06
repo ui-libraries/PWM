@@ -172,6 +172,30 @@ p.footer {
 	margin-top:0;
 }
 
+
+.row {
+	width:100%;
+	clear:both;
+}
+.row_image {	
+	text-align:center;
+	width: 25%;
+	text-align:center;
+	margin-left: auto;
+	margin-right:auto;
+	float:left;
+}
+.row_text, .row_text_50 {
+	width: 75%;
+	text-align:left;
+	margin-left:0px;
+	padding-left: 0px;
+	float:left;
+}
+.row_text_50 {
+	width: 50%;	
+}
+
 #logo {
 	float:left;
 	width:200px;

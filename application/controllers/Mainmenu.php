@@ -25,6 +25,12 @@ class Mainmenu extends CI_Controller {
 		$this->load->view('gottschalk_book', $this->view_data);
 	}
 
+	public function about($tabindex=0) {
+		//if tabindex is not passed in as a parameter, e.g. http://...about/2 then it will default to 0
+		$this->view_data['tabindex'] = $tabindex;
+		$this->load->view('v_about', $this->view_data);
+	}
+
 }
 	
 ?>
