@@ -27,7 +27,7 @@
 		    	<h2>About PWM</h2>
 		    	<div id="tabs" class="spaceleft">
 					<ul>
-					    <li><a href="#tabs-1">About Us</a></li>
+					    <li><a href="#tabs-1">About PWM</a></li>
 					    <li><a href="#tabs-2">Our Team</a></li>
 					    <li><a href="#tabs-3">Our Funders</a></li>
 					    <li><a href="#tabs-4">Our Partners</a></li>
@@ -206,6 +206,22 @@
 				    </div>
 	
 					<div id="tabs-3">
+						<h3>Our Funders</h3>
+
+				    	<div class="spaceleft row">
+				    		<div class="row_image">
+				    			<img alt="CGRER" src="<?php echo resource_url('image/PWM/people/CGRER.jpg'); ?>">
+				    		</div>
+				    		<div class="row_text">
+				    			<p>
+					    			<span class="lead_in">The Center for Global and Regional Environmental Research (CGRER)</span>is a state-funded institute devoted to studying and bettering our environment.
+				    			</p>
+				    			<p>
+									The Center promotes interdisciplinary research on the many aspects of global environmental change. Areas of focus include regional effects on natural ecosystems, environments, and resources, and effects on human health, culture, and social systems. <a href="http://cgrer.uiowa.edu/">cgrer.uiowa.edu</a>
+								</p>
+				    		</div>
+				    	</div>
+
 						<h3>Our Funders</h3>
 				    	<div class="spaceleft">
 					    	<p>Lorem Ipsum</p>

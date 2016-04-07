@@ -135,7 +135,7 @@ class Image_manager extends CI_Controller {
 			$imagetype = $this->input->post('imagetype');
 			$storyname =  $this->input->post('storyname');
 			
-			$this->relative_path="resources/image/";
+			$this->relative_path="";
 			if (empty($countyname)) {
 				$this->data['errmsg'] = "No County specified";
 			} else {
@@ -152,12 +152,7 @@ class Image_manager extends CI_Controller {
 			} else {
 				$this->data['errmsg'] = "No image type specified";
 			}
-			$upload_path = FCPATH.$this->relative_path;
-/*
-fred($upload_path, "upload path");
-die;
-*/
-	
+			$upload_path = FCPATH."resources/image/".$this->relative_path;
 			
 			if (empty ($this->data['errmsg'])) {				
 				$config['upload_path'] = $upload_path;
@@ -249,9 +244,10 @@ die;
 		$query = $this->db->get_where('images', array('id'=>$this->input->post('imageID')));
 		$row=$query->row();
 		if (!empty($row)) {
-			$file_to_delete = $row->source_path.$row->image_name;
+			//$file_to_delete = $row->source_path.$row->image_name;
+			$file_to_delete = FCPATH."resources/image/".$row->source_path.$row->image_name;
 			unlink ($file_to_delete);
-			$file_to_delete = $row->source_path.$row->thumb_name;
+			$file_to_delete = FCPATH."resources/image/".$row->source_path.$row->thumb_name;
 			unlink ($file_to_delete);
 			$this->db->where('id', $row->id);
 			$this->db->delete('images');
