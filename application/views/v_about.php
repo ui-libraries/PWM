@@ -86,7 +86,7 @@
 
 				    	<div class="row spaceleft spaceabove">
 				    		<div class="row_image">
-				    			<img alt="Christina Zinkgraf " src="<?php echo resource_url('image/PWM/people/ChristinaZinkgraf .jpg'); ?>">
+				    			<img alt="Christina Zinkgraf " src="<?php echo resource_url('image/PWM/people/ChristinaZinkgraf.jpg'); ?>">
 				    		</div>
 				    		<div class="row_text_50">
 				    			<span class="lead_in">Christina Zinkgraf </span> is the Graduate Assistant for the Peoples’ Weather Map. Born and raised in Eugene, Oregon, Christina received a bachelor’s of science in Environmental Science from the University of Washington-Tacoma. She has loved her time in Iowa, where she is pursuing her Masters in Teaching-Science Education at the University of Iowa. After graduation in 2017, Christina would like to teach 7th and 8th grade science.
