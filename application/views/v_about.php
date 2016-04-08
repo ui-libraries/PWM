@@ -255,18 +255,50 @@
 				    		<p> The University of Iowa strives to provide a high-quality educational experience for its students. Participation in research and scholarly activities represents an opportunity, uniquely available at research universities, to enhance the overall undergraduate experience. <a href="http://www.uiowa.edu/icru/">www.uiowa.edu/icru/</a>
 			    			</p>
 			    		</div>
-
 				    </div>
 
 
 					<div id="tabs-4">
 						<h3>Our Partners</h3>
-				    	<div class="spaceleft">
-					    	<p>Lorem Ipsum</p>
-				    	</div>				    	
-					</div>
+				    	<div class="spaceleft row">
+				    		<div class="row_image">
+				    			<img alt="IowaUNA" src="<?php echo resource_url('image/PWM/partners/IowaUnitedNationsAssociation.png'); ?>">
+				    		</div>
+				    		<div class="row_text">
+				    			<p>
+				    			<span class="lead_in">The Iowa United Nations Association</span> is a 501(c) 3 non-profit organization seeking to connect Iowans to global issues.  We connect your family to the world through educational programming for youth and adults, emergency and annual humanitarian relief drives, and unique celebrations of our global interconnectedness. <a href="http://iowauna.org/">iowauna.org/</a> 
+				    			</p>
+				    		</div>
+				    	</div>
 
+				    	<div class="row spaceleft spaceabove">
+				    		<div class="row_image">
+				    			<img alt="State Historical Society of Iowa" src="<?php echo resource_url('image/PWM/partners/StateHistoricalSocietyOfIowa.png'); ?>">
+				    		</div>
+				    		<div class="row_text">
+				    			<p>
+				    			<span class="lead_in">The State Historical Society of Iowa</span> has been a trustee of Iowa’s historical legacy since 1857. With a dual mission of preservation and education, it maintains a museum, archives & historical libraries, preservation office, and eight historic sites. These bureaus preserve and provide access to Iowa’s historical resources through a variety of statewide programs, exhibitions and projects while serving as an advocate for Iowa’s past and connector to the future. <a href="https://iowaculture.gov/">iowaculture.gov</a> 
+				    			</p>
+				    		</div>
+				    	</div>
 
+				    	<div class="row spaceleft spaceabove">
+				    		<div class="row_image">
+				    			<img alt="Stephen Warren" src="<?php echo resource_url('image/PWM/partners/Stephen-Warren.jpg'); ?>">
+				    		</div>
+				    		<div class="row_text">
+				    			<p>
+				    			<span class="lead_in">Stephen Warren: University of Iowa History Professor</span>
+				    			</p>
+				    			<p>
+				    			As both a teacher and a scholar, Stephen Warren emphasizes that the past is never safely historical. By contributing to the cultural survival of several different federally-recognized American Indian tribes, his students begin to view academic research with a fresh perspective; as avenues for serving the world rather than knowledge that is peculiar and limited to the college classroom. <a href="http://clas.uiowa.edu/history/people/stephen-warren">clas.uiowa.edu/history/people/stephen-warren</a> 
+				    			</p>
+				    		</div>
+				    	</div>
+
+				    	<div class="row"></div>
+
+				    </div>
 				</div>
 	    	</div>
     	</div>
