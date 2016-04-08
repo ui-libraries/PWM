@@ -199,34 +199,65 @@
 				    		</div>
 				    	</div>
 
-				    	<div class="row spaceleft spaceabove"></div>
-
-
-
-				    </div>
+				    	<div class="row spaceleft spaceabove"></div>				    	
+				   	</div>
 	
 					<div id="tabs-3">
 						<h3>Our Funders</h3>
 
 				    	<div class="spaceleft row">
-				    		<div class="row_image">
-				    			<img alt="CGRER" src="<?php echo resource_url('image/PWM/people/CGRER.jpg'); ?>">
-				    		</div>
-				    		<div class="row_text">
-				    			<p>
-					    			<span class="lead_in">The Center for Global and Regional Environmental Research (CGRER)</span>is a state-funded institute devoted to studying and bettering our environment.
-				    			</p>
-				    			<p>
-									The Center promotes interdisciplinary research on the many aspects of global environmental change. Areas of focus include regional effects on natural ecosystems, environments, and resources, and effects on human health, culture, and social systems. <a href="http://cgrer.uiowa.edu/">cgrer.uiowa.edu</a>
-								</p>
-				    		</div>
+				    			<img alt="CGRER" src="<?php echo resource_url('image/PWM/funders/CGRER.png'); ?>">
+				    	</div>
+				    	<div class="spaceleft row">
+			    			<p>
+				    			<span class="lead_in">The Center for Global and Regional Environmental Research (CGRER)</span>is a state-funded institute devoted to studying and bettering our environment.
+			    			</p>
+			    			<p>
+								The Center promotes interdisciplinary research on the many aspects of global environmental change. Areas of focus include regional effects on natural ecosystems, environments, and resources, and effects on human health, culture, and social systems. <a href="http://cgrer.uiowa.edu/">cgrer.uiowa.edu</a>
+							</p>
 				    	</div>
 
-						<h3>Our Funders</h3>
-				    	<div class="spaceleft">
-					    	<p>Lorem Ipsum</p>
-				    	</div>				    	
-					</div>
+				    	<div class="row spaceleft spaceabove">
+				    			<img alt="Humanities Iowa" src="<?php echo resource_url('image/PWM/funders/HI_150.png'); ?>">
+				    	</div>
+				    	<div class="row spaceleft">
+			    			<p>
+				    			<span class="lead_in">Humanities Iowa</span> -- to promote understanding and appreciation of the people, communities, culture, and stories of importance to Iowa and the nation. <a href="http://thestudio.uiowa.edu/humanitiesiowa/wp/">thestudio.uiowa.edu/humanitiesiowa/wp/</a>
+			    			</p>
+			    		</div>
+
+				    	<div class="row spaceleft spaceabove">
+				    			<img alt="Digital Scholarship & Publishing Studio" src="<?php echo resource_url('image/PWM/funders/DSPS.png'); ?>">
+				    	</div>
+				    	<div class="row spaceleft">
+			    			<p>
+				    			<span class="lead_in">The Digital Scholarship & Publishing Studio</span> collaborates with faculty and students on the design and implementation of research projects, and subscribes to a show more, tell less approach where digital scholarship – and particularly the digital humanities – are concerned. The Studio embraces scholarly creativity, encouraging interdisciplinary research and multiplatform circulation. In this manner, the Studio helps scholars tailor the presentation and application of their research to a variety of audiences. 
+				    			<a href="https://www.lib.uiowa.edu/studio/">www.lib.uiowa.edu/studio</a>
+			    			</p>
+			    		</div>
+
+				    	<div class="row spaceleft spaceabove">
+				    			<img alt="Iowa EPSCoR" src="<?php echo resource_url('image/PWM/funders/IowaEpscor.png'); ?>">
+				    	</div>
+				    	<div class="row spaceleft">
+			    			<p>
+				    			<span class="lead_in">The Experimental Program to Stimulate Competitive Research (EPSCoR)</span> is a federal program designed to improve the research capacity of eligible states or regions, making them nationally competitive for future grants. <a href="http://www.nsf.gov/od/oia/programs/epscor/index.jsp">www.nsf.gov/od/oia/programs/epscor/index.jsp</a>
+			    			</p>
+			    		</div>
+
+				    	<div class="row spaceleft spaceabove">
+				    			<img alt="ICRU" src="<?php echo resource_url('image/PWM/funders/ICRU.jpg'); ?>">
+				    	</div>
+				    	<div class="row spaceleft">
+			    			<p>
+				    			<span class="lead_in">Iowa Center for Research by Undergraduates </span>
+				    		</p>
+				    		<p> The University of Iowa strives to provide a high-quality educational experience for its students. Participation in research and scholarly activities represents an opportunity, uniquely available at research universities, to enhance the overall undergraduate experience. <a href="http://www.uiowa.edu/icru/">www.uiowa.edu/icru/</a>
+			    			</p>
+			    		</div>
+
+				    </div>
+
 
 					<div id="tabs-4">
 						<h3>Our Partners</h3>
