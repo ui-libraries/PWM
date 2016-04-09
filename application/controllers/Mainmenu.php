@@ -30,6 +30,10 @@ class Mainmenu extends CI_Controller {
 		$this->view_data['tabindex'] = $tabindex;
 		$this->load->view('v_about', $this->view_data);
 	}
+	public function links() {
+		$this->load->view('v_links', $this->view_data);
+	}
+
 
 }
 	
