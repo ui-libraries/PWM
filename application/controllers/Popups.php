@@ -122,11 +122,13 @@ class Popups extends CI_Controller {
 			
 			$query=$this->db->get_where('popups_content', array('id' => $popup_view->f_content_id));
 			$popup_content = $query->row();
+			$popup_content->f_popups_id = $popup->id;
+			$popup_content->popupname = $popup->popupname;
 			$popup_content->title = $this->input->post('popup_title_text');
 			$popup_content->subtitle = $this->input->post('popup_subtitle_text');
 			$popup_content->imageurl = $this->input->post('popup_imageurl');
 			$popup_content->body = $this->input->post('body');
-			$popup_content->buttontxt = $this->input->post('popup_buttontxt');
+			$popup_content->buttontxt = $this->input->post('popup_buttontext');
 			$popup_content->buttonurl = $this->input->post('popup_storyurl');
 			$this->db->replace('popups_content', $popup_content);
 		
