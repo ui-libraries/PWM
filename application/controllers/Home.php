@@ -83,7 +83,8 @@ class Home extends CI_Controller {
         	->from ('counties')
         	->where ('county', $caller)
         	->get();
-        $county = $quCounty->result();
+        	
+        $county = $qCounty->row();
         $this->m_stories->f_county_id = $county->id;
         
         $this->m_stories->county = $caller;

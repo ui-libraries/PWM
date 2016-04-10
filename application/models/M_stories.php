@@ -95,13 +95,13 @@ class M_stories extends CI_model
 
         if (!empty($this->story_name)) {
             
-            $query = $this->db->select('id')
-                ->get_where('stories', array( 
-                    'f_county_id'=>$this->f_county_id,
-                    'story_name'=>$this->story_name
-                ));
-            $story_id = $query->row()->id;
+            $qStory = $this->db->select('id')
+                ->from('stories')
+                ->where('f_county_id',$this->f_county_id)
+                ->where('story_name', $this->story_name)
+                ->get();
+            $story = $qStory->row();
         }
-        return !empty($story_id) ? $story_id : false;
+        return !empty($story) ? $story->id : false;
     }
 }
