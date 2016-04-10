@@ -39,6 +39,7 @@ class M_stories extends CI_model
                     ->or_like ('location',$this->searchval)
                     ->or_like ('county',$this->searchval);
         }
+        $this->db->order_by('last_modified', 'DESC');
         $this->db->limit($limit, $start);
         
         $query = $this->db->get();
@@ -91,10 +92,14 @@ class M_stories extends CI_model
     }
     public function get_story_id() {
         //$this-storyname = county/storyname
+
         if (!empty($this->story_name)) {
             
             $query = $this->db->select('id')
-                ->get_where('stories', array('story_name'=>$this->story_name));
+                ->get_where('stories', array( 
+                    'f_county_id'=>$this->f_county_id,
+                    'story_name'=>$this->story_name
+                ));
             $story_id = $query->row()->id;
         }
         return !empty($story_id) ? $story_id : false;

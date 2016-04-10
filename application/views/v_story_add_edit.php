@@ -46,7 +46,7 @@
 		        		'name' => 'story_name',
 		        		'id'=>'title',
 		        		'class'=>'form-control',
-						'placeholder'=>'countyname/storyname (no spaces)',
+						'placeholder'=>'storyname (no spaces, unique within county)',
 		        		'value' => $story->story_name
 		        	);
 					echo form_input($options); 
@@ -68,6 +68,7 @@
 					'name' => 'story_title',
 					'id'=>'title',
 					'class'=>'form-control',
+					'placeholder'=>'Title appears at top of the story page',
 					'value' => $story->title
 				);
 				echo form_input($options);
@@ -87,7 +88,8 @@
 			        	'type'=>'text', 
 		        		'name' => 'story_location', 
 		        		'id'=>'story_location', 
-		        		'class'=>'form-control',  
+		        		'class'=>'form-control',
+		        		'placeholder'=>'Location within county',
 		        		'value' => $story->location
 		        	);
 					echo form_input($options); 
@@ -107,7 +109,8 @@
 			        	'type'=>'text', 
 		        		'name' => 'story_byline', 
 		        		'id'=>'story_byline', 
-		        		'class'=>'form-control',  
+		        		'class'=>'form-control',
+						'placeholder'=>'Person who provided this story',  
 		        		'value' => $story->byline
 		        	);
 					echo form_input($options); 

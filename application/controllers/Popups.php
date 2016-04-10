@@ -128,6 +128,7 @@ class Popups extends CI_Controller {
 			$popup_content->subtitle = $this->input->post('popup_subtitle_text');
 			$popup_content->imageurl = $this->input->post('popup_imageurl');
 			$popup_content->body = $this->input->post('body');
+			
 			$popup_content->buttontxt = $this->input->post('popup_buttontext');
 			$popup_content->buttonurl = $this->input->post('popup_storyurl');
 			$this->db->replace('popups_content', $popup_content);

@@ -78,6 +78,14 @@ class Home extends CI_Controller {
 
         //load story from mysql story table
         $this->load->model('m_stories');
+
+        $qCounty = $this->db->select ('id')
+        	->from ('counties')
+        	->where ('county', $caller)
+        	->get();
+        $county = $quCounty->result();
+        $this->m_stories->f_county_id = $county->id;
+        
         $this->m_stories->county = $caller;
 //		$this->m_stories->story_name = $caller."/".$story;
 		$this->m_stories->story_name = $story;
