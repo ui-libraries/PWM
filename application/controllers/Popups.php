@@ -102,6 +102,7 @@ class Popups extends CI_Controller {
 			$popup_marker->coords = $this->input->post('coords');
 			$popup_marker->layergroup = $this->input->post('layergroup');
 			$popup_marker->markertype = $this->input->post('markertype');
+			$popup_marker->iconname = $this->input->post('iconname');
 			$this->db->replace('popups_markers',$popup_marker);
 			
 			$query=$this->db->get_where('popups_icons', array('id' => $popup_view->f_icon_id));
