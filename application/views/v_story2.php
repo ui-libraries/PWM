@@ -49,5 +49,12 @@
         </div>
     </div>
 
+<script type="text/javascript">
+$(document).ready(function(){
+        $(function() {
+            $('.quickFlip_1').quickFlip();
+        });
+    });
+</script>
 
  <?php include('includes/standard_footer.incl'); ?>
