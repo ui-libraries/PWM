@@ -15,6 +15,7 @@
 			echo form_open ('stories/save', array('class'=>'form-horizontal'));
 			echo form_hidden('story_id',$story->id);
 			echo form_hidden('edit_status',$edit_status); //"edit" or "new"
+			echo form_hidden('searchVal', (!empty($searchVal) ? $searchVal : ""));
 			$options =  array ('class'=>'btn btn-primary');
 			echo form_submit('cancel', 'Cancel', $options);
 			?>

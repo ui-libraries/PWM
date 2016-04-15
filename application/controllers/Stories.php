@@ -9,7 +9,8 @@ class Stories extends CI_Controller {
 
     public function search_story() {
 		$this->load->library('table');
-		$this->m_stories->searchval = $this->input->post('searchVal');
+		$data['searchVal'] = $this->input->post('searchVal');
+		$this->m_stories->searchval = $data['searchVal'];
 		$data['fetchlist'] = $this->m_stories->fetch_list();
 		$this->load->view('v_stories_manage', $data);
 	}
@@ -22,16 +23,13 @@ class Stories extends CI_Controller {
 		
 		if (!empty($story_id)) {
 			$data['story'] = $this->m_stories->load_story($story_id);
+			$data['searchVal'] = $this->input->post('searchVal');
 			$data['edit_status'] = "edit";
 		} else {
 			$data['story'] = $this->m_stories->load_story();
 			$data['edit_status'] = "new";
 		}
 		$this->load->view('v_story_add_edit', $data);
-	}
-
-	public function delete_story() {
-		//don't know if I am going to do this yet
 	}
 
 	public function cancel() {
@@ -73,8 +71,13 @@ class Stories extends CI_Controller {
 			} else if ($this->input->post('save_go_admin')) {
 				redirect('admin');
 			}
-		} else {
-			redirect('admin');
+		} else { //cancel: delete the story if new
+			if ($this->input->post('edit_status') == "new") {
+				$story_id = $this->input->post('story_id');
+				$this->m_stories->delete_story($story_id);
+			}
+			$this->search_story();
+			//redirect('admin');
 		}
 	}
 }

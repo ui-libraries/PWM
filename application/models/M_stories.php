@@ -104,4 +104,13 @@ class M_stories extends CI_model
         }
         return !empty($story) ? $story->id : false;
     }
+
+    public function delete_story($story_id=null) {
+        if (!empty($story_id)) {
+            $this->db->where('id', $story_id)
+                ->delete('stories');
+            $num_deleted = $this->db->affected_rows();
+        }
+        return (!empty ($num_deleted)) ? $num_deleted : false;
+    }
 }
