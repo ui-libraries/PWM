@@ -18,7 +18,8 @@ class Stories extends CI_Controller {
 	public function add_edit_story() {
 		$story_id = $this->input->post('story_id');
 		
-		$query = $this->db->get('counties');
+		$query = $this->db->order_by('id')
+			->get('counties');
 		$data['counties']=$query->result();
 		
 		if (!empty($story_id)) {
