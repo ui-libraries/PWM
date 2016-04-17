@@ -79,31 +79,35 @@ class Home extends CI_Controller {
         //load story from mysql story table
         $this->load->model('m_stories');
 
-        $qCounty = $this->db->select ('id')
+
+        //set m_stories->f_county_id for use by m_stories->get_story_id()
+		$qCounty = $this->db->select ('id')
         	->from ('counties')
         	->where ('county', $caller)
         	->get();
-        	
-        $county = $qCounty->row();
+		$county = $qCounty->row();
         $this->m_stories->f_county_id = $county->id;
         
         $this->m_stories->county = $caller;
-//		$this->m_stories->story_name = $caller."/".$story;
 		$this->m_stories->story_name = $story;
 
-		//need storyid
+		//get storyid, load content, replace relative image links
 		$story_id = $this->m_stories->get_story_id();
         $story=$this->m_stories->load_story($story_id);
 		$story->story_content = str_replace("../../",base_url(),$story->story_content);
-		//<img src="../../resources/image/lyon/PeopleOnTheMove/lyon-nhl-bloodrun.jpg"
 
-//		$this->view_data['story'] = $this->m_stories->load_story($story_id);
-		$this->view_data['story'] = $story;
+			$this->view_data['story'] = $story;
 
         //$this->view_data['story_include'] = "stories/".$caller."/".$story.".php";
 
         $this->view_data['return'] =$caller;
-        $this->load->view('v_story2',$this->view_data);
+
+		//videos are grouped under "county" PWM and use a different view
+		if ($caller == 'PWM'){
+			$this->load->view('v_story_video', $this->view_data);
+		} else {
+			$this->load->view('v_story2', $this->view_data);
+		}
     }
 
 	public function xstory($caller,$story) {
