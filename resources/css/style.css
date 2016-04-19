@@ -342,7 +342,7 @@ way to fit your requirements.
 /*width: 745px;*/
 	height:32px;
 	position:relative;
-	z-index:2000;
+	z-index:1000;
 	border-right:1px solid #585752;
 	font-family:arial,sans-serif;
 }
@@ -485,7 +485,10 @@ way to fit your requirements.
 
 /*secondary jquery menu*/
 .ui-menu {
-	z-index:3000;
+	z-index:2000;
+}
+.ui-front{
+	z-index:1900;
 }
 
 .active {
