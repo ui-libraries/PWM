@@ -1,2 +1,6 @@
-#Set environment variables
-SetEnv APPLICATION_ENV development
+RewriteEngine on
+RewriteBase /PhpstormProjects/PWM
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php|images|robots\.txt)
+RewriteRule ^(.*)$ index.php/$1 [L]
