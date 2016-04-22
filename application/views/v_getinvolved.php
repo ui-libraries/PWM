@@ -31,7 +31,7 @@
 			</div>
 			<div class="rightcol500 nomargin">
 		    	<h2>Get Involved</h2>
-		    	<p>If you would like to contribute a severe weather story for one of Iowa’s counties, PWM would like to hear from you.  You can provide photographs of severe weather events, a weather diary, or a story of severe weather.  Whether the severe weather event was long ago or just last week, we would like to see your story.  Contact us and we will tell you how to submit your story or images.  <a href="mailto:pwm@uiowa.edu">pwm@uiowa.edu</a>
+		    	<p>If you would like to contribute a severe weather story for one of Iowa’s counties, PWM would like to hear from you.  You can provide photographs of severe weather events, a weather diary, or a story of severe weather.  Whether the severe weather event was long ago or just last week, we would like to see your story.  Contact us and we will tell you how to submit your story or images.  <a href="mailto:ENGL-PeoplesWeatherMap@uiowa.edu">ENGL-PeoplesWeatherMap@uiowa.edu</a>
 				</p>
 				<img src="../../resources/image/linn/Midland/Brian.jpg">
 				<img src="../../resources/image/cedar/1965Tornado/PalmSundayTornado-1965Kruckenberg-S.jpg">

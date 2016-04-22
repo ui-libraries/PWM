@@ -49,7 +49,7 @@
 							The purpose of PWM is to enable Iowans to view local severe weather stories and to share their severe weather stories with one another and with the world through their own words and images.  This process of sharing, we believe, broadens our understanding of how the weather challenges we face have been met by others in Iowa and across the world.  
 							</p>
 							<p>
-							To become a PWM public partner or to learn more about the project, email <a href="mailto:pwm@uiowa.edu">pwm@uiowa.edu</a>
+							To become a PWM public partner or to learn more about the project, email <a href="mailto:ENGL-PeoplesWeatherMap@uiowa.edu">ENGL-PeoplesWeatherMap@uiowa.edu</a>
 							</p>
 				    	</div>
 				    </div>				    	
