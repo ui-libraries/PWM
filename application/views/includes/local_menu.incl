@@ -5,5 +5,11 @@
 
 </script>
 <style>
-    .ui-menu { width: 150px; }
+    .ui-menu {
+        width: 150px;
+        z-index: 2000;
+    }
+    .ui-front{
+        z-index: 1900;
+    }
 </style>

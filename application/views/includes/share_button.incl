@@ -1,0 +1,10 @@
+	<script>
+		$(function() {
+		    $( "#share_button" )
+		      	.button()
+		      	.click(function( event ) {
+		        	event.preventDefault();
+		        	window.location.href='<?php echo site_url("mainmenu/getinvolved");?>';
+		    });
+		});
+	</script>

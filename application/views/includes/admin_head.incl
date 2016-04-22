@@ -1,0 +1,21 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title><?php echo $page_title; ?></title>
+        
+        <?php 
+            echo link_tag('resources/css/style.css');
+			include ('jquery_head.incl');
+	        echo "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\">";
+			echo "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css\">";
+			//add custom bootstrap css ovrerride
+			$fileinfo = get_file_info('css/bootstrap_custom.css','date');
+			$d=$fileinfo['date'];
+			echo link_tag ("css/bootstrap_custom.css?d={$d}");
+			echo "<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js\"></script> ";
+		?>
+
+		<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+        <script>tinymce.init({ selector:'textarea' });</script>
+
+    </head>

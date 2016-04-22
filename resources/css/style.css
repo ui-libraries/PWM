@@ -30,6 +30,7 @@ body {
 	color:#4F5155;
 }
 
+
 a {
 	color:#039;
 	background-color:transparent;
@@ -57,7 +58,14 @@ code {
 	padding:12px 10px;
 }
 
+.monospace {
+	font-family:Consolas,Monaco,Courier New,Courier,monospace;
+}
+
 .reversetype {color: white;}
+a.reversetype {
+	color: #e4e8ff;
+}
 
 #body {
 	margin:0 15px;
@@ -80,6 +88,17 @@ p.footer {
 	margin-left:auto;
 	margin-right:auto;
 }
+
+/* to avoid conflicts with Bootstrap class container */
+#pwm_container {
+	margin:10px;
+	border:1px solid #D0D0D0;
+	-webkit-box-shadow:0 0 8px #D0D0D0;
+	width:1045px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
 
 /* Page Layout: header, fixed column left, fluid column right */
 #topsection {
@@ -155,6 +174,35 @@ p.footer {
 /*Margins for inner DIV inside each column (to provide padding)*/
 	margin-top:0;
 }
+.videoframe720 {
+	width:740px;
+	margin-left:auto;
+	margin-right:auto;
+	padding: 10px;
+	background-color: #1c1c1c;
+}
+.row {
+	width:100%;
+	clear:both;
+}
+.row_image {	
+	text-align:center;
+	width: 25%;
+	text-align:center;
+	margin-left: auto;
+	margin-right:auto;
+	float:left;
+}
+.row_text, .row_text_50 {
+	width: 75%;
+	text-align:left;
+	margin-left:0px;
+	padding-left: 0px;
+	float:left;
+}
+.row_text_50 {
+	width: 50%;	
+}
 
 #logo {
 	float:left;
@@ -200,6 +248,10 @@ p.footer {
 
 .spaceleft {
 	margin-left: 20px;
+}
+
+.spaceabove {
+	margin-top: 20px;
 }
 
 .centered {
@@ -290,7 +342,7 @@ way to fit your requirements.
 /*width: 745px;*/
 	height:32px;
 	position:relative;
-	z-index:2000;
+	z-index:1000;
 	border-right:1px solid #585752;
 	font-family:arial,sans-serif;
 }
@@ -433,7 +485,10 @@ way to fit your requirements.
 
 /*secondary jquery menu*/
 .ui-menu {
-	z-index:3000;
+	z-index:2000;
+}
+.ui-front{
+	z-index:1900;
 }
 
 .active {
@@ -444,6 +499,14 @@ way to fit your requirements.
 .heading {
 	font-weight: bold !important;
 }
+
+#share_button {
+	position: absolute;
+	bottom: 25px;
+	width: 175px;
+	white-space: normal !important;
+}
+
 
 /*
 mediaqueries
