@@ -43,7 +43,7 @@
 						 	</p>
 						 	<h4>Drought Impacts</h4>
 							<p>There is no specific geography associated with drought, as drought conditions can occur in any place.  Drought fundamentally differs from aridity:  aridity is a permanent climatic characteristic of a region, whereas drought is a temporary condition.  Compared to other natural hazards, drought is unique due to its combination of slow rate of onset and large impact area.  The direct impacts of drought include reduced agricultural land and productivity, reduced water levels, crop damage, and food insecurity.  Indirectly, severe drought can produce major environmental, economic and social impacts, including increased wildfire hazard, damage to ecological habitats, dust storms, lost income, increased water and energy demands, and political and social unrest.  In its most extreme form, drought can enhance the availability of loose surface soils, a situation that helped produce the Dust Bowl of the 1930s.  More recently severe drought has been a leading precursor to civil war in Darfur and Syria, with associated impacts of famine and large-scale population displacement.</p>
-							<a href="http://mashable.com/2015/03/02/global-warming-syria-civil-war/#r2SAshNzGkqH" target="_blank"><img class="aligncenter" src="<?php echo resource_url('image/PWM/hazards/drought/syria.png');?>" width="800"></a>
+							<a href="http://mashable.com/2015/03/02/global-warming-syria-civil-war/#r2SAshNzGkqH" target="_blank"><img class="aligncenter" src="<?php echo resource_url('image/PWM/hazards/drought/Syria.png');?>" width="800"></a>
 							<h4>Measuring drought</h4>
 							<p>
 
