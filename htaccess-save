@@ -1,0 +1,2 @@
+#Set environment variables
+SetEnv APPLICATION_ENV development
