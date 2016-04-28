@@ -78,14 +78,17 @@ class Home extends CI_Controller {
 
         //load story from mysql story table
         $this->load->model('m_stories');
-
-
+        
         //set m_stories->f_county_id for use by m_stories->get_story_id()
+        //to accomodate two-word counties e.g Des Moines:
+		//->where ("LOWER(REPLACE(county,' ',''))" , $caller)
 		$qCounty = $this->db->select ('id')
         	->from ('counties')
-        	->where ('county', $caller)
+        	->where ("LOWER(REPLACE(county,' ','')) LIKE" , $caller)
         	->get();
 		$county = $qCounty->row();
+
+
         $this->m_stories->f_county_id = $county->id;
         
         $this->m_stories->county = $caller;
@@ -109,16 +112,6 @@ class Home extends CI_Controller {
 			$this->load->view('v_story2', $this->view_data);
 		}
     }
-
-	public function xstory($caller,$story) {
-        /* example http://peoplesweathermap.org/index.php/home/story/lyon/PeopleOnTheMove
-           $caller = 'lyon', $story='PeopleOnTheMove'
-        */
-
-		$this->view_data['story_include'] = "stories/".$caller."/".$story.".php";
-		$this->view_data['return'] =$caller;
-		$this->load->view('v_story',$this->view_data);
-	}
 
 
 	public function tester() {
