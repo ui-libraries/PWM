@@ -28,9 +28,9 @@
 		    	<div id="tabs" class="spaceleft">
 					<ul>
 					    <li><a href="#tabs-1">Drought</a></li>
-					    <li><a href="#tabs-2">Flood</a></li>
+						<!-- <li><a href="#tabs-2">Flood</a></li>
 					    <li><a href="#tabs-3">Extreme Winds</a></li>
-					    <li><a href="#tabs-4">Extreme Temperatures</a></li>
+					    <li><a href="#tabs-4">Extreme Temperatures</a></li> -->
 					</ul>
 
 					<div id="tabs-1">
@@ -55,7 +55,7 @@
 			    	</div>
 				    </div>				    	
 
-					<div id="tabs-2">
+<!-- 					<div id="tabs-2">
 				    	<h3>Flood</h3>
 				    	<div class="spaceleft row"></div>
 					</div>
@@ -66,7 +66,7 @@
 					<div id="tabs-4">
 						<h3>Extreme Temperatures</h3>
 				    	<div class="spaceleft row"></div>
-				    </div>
+				    </div> -->
 				</div>
 	    	</div>
     	</div>

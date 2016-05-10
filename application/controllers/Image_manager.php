@@ -139,6 +139,8 @@ class Image_manager extends CI_Controller {
 			if (empty($countyname)) {
 				$this->data['errmsg'] = "No County specified";
 			} else {
+				//need to accomodate two word county names by stripping out all white space
+				$countyname = preg_replace('/\s/', '', $countyname);
 				$this->relative_path .= strtolower($countyname)."/";
 			}
 			if ($imagetype == "popup") { 
