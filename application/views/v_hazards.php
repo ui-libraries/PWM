@@ -28,9 +28,10 @@
 		    	<div id="tabs" class="spaceleft">
 					<ul>
 					    <li><a href="#tabs-1">Drought</a></li>
-						<!-- <li><a href="#tabs-2">Flood</a></li>
-					    <li><a href="#tabs-3">Extreme Winds</a></li>
-					    <li><a href="#tabs-4">Extreme Temperatures</a></li> -->
+					    <li><a href="#tabs-2">Tornadoes</a></li>
+						<!-- <li><a href="#tabs-3">Flood</a></li>
+					    <li><a href="#tabs-4">Extreme Winds</a></li>
+					    <li><a href="#tabs-5">Extreme Temperatures</a></li> -->
 					</ul>
 
 					<div id="tabs-1">
@@ -55,11 +56,95 @@
 			    	</div>
 				    </div>				    	
 
-<!-- 					<div id="tabs-2">
-				    	<h3>Flood</h3>
-				    	<div class="spaceleft row"></div>
+ 					<div id="tabs-2">
+				    	<h3>Tornadoes</h3>
+				    	<div class="spaceleft">
+				    		<h4>How they form</h4>
+				    		<p>
+								<a href="http://kids.britannica.com/thunderstorms_tornadoes/ocliwea124v4.html" target="_blank"><img class="alignright spaceleft" src="<?php echo resource_url('image/PWM/hazards/tornado/ocliwea124a4.gif');?>" width="400"></a>Tornadoes are short-lived, violent storms that generate the highest wind speeds of any weather phenomena.  They can form when a mass of slow-moving warm and humid air near the earth’s surface is overrun by a faster-moving mass of cold and dry air aloft.  The differences in wind speed and direction at different altitudes is known as <a href="http://www.tornadochaser.net/windshear.html"> wind shear</a> and induces horizontal rotation in the air.  Meanwhile, the steep temperature gradients between the air masses create atmospheric instability, causing updrafts of moisture-laden warm air that begin rotating as they rise.  High-intensity rotating updrafts are common in <a href="http://www.srh.noaa.gov/bmx/?n=supercell"> Supercell thunderstorms</a>, in which the spinning vortex may assume the familiar vertical funnel shape of a tornado.
+				    		</p>
+				    		<h4>Tornado Alley</h4>
+				    		<p>
+				    			There are about 1,200 tornadoes across the U.S. each year (~35-40 in Iowa), with particularly high occurrence in the central plains region known as <a href="https://en.wikipedia.org/wiki/Tornado_Alley#Tornado_alley_geographical_area">Tornado Alley</a>. Stretching north from central Texas to Minnesota, it is a convergence zone of high-altitude cold dry air moving south from Canada and low-altitude warm humid air moving north from the Gulf of Mexico. The combination produces high wind shear and atmospheric instability that spawn tornadoes.  
+							</p>
+							<p>
+				    			<a href="http://www.weathertrends360.com/Blog/Post/Blizzard-Alley-Meet-Tornado-Alley-777" target="_blank"><img class="alignleft spaceright" src="<?php echo resource_url('image/PWM/hazards/tornado/Tornado-Alley.png');?>" width="463"></a>
+				    			Globally, the middle latitudes between 30 and 50 degrees are the most favorable areas for tornado formation, as this is where cold polar and warm subtropical air masses meet.  However, about 90% of all tornadoes occur in the U.S. due to a few distinctive features of the physical geography.  First, the mountain chains run north-south, meaning there are no physical barriers for the convergence of air masses.  Second, mid-altitude hot dry air moving west from the Southern Rockies often also converges and acts as a lid on the rising subtropical air.  This amplifies atmospheric instability.  The peak of the U.S. tornado season occurs in spring and early summer.  As the season progresses, the jet stream moves northward and with it tornadoes also migrate northward within Tornado Alley.
+				    		</p>
+				    		<h4>Damage severity</h4> 
+				    		<p>
+				    			High velocity tornado winds can pick up debris and transform it into high-speed projectiles that can damage property and cause serious injury.  Tornado damage severity is measured by the <a href="http://www.spc.noaa.gov/faq/tornado/ef-scale.html">Enhanced Fujita (EF) Tornado Intensity Scale</a>, which assigns a rating between EF-0 and EF-5 based on building damage. The EF rating for a particular tornado is based on the post-storm field evaluation of 28 different indicators (such as homes, retail structures, and trees) across 10 degrees of damage.  Although the EF scale includes wind speed estimates, these values are only inferred based on damage, because it is very difficult to directly measure the tornado wind speed.  The EF scale was devised by a panel of meteorologists and wind engineers, and became operational in 2007.  It revised the original Fujita Scale (1973) to better align observed damage with estimated wind speeds, especially for high intensity tornadoes.
+				    		</p>
+
+				    		<table border="1">
+				    			<tr>
+				    				<th style="width:12%, vertical-align:top">Rating</th>
+				    				<th style="width:10%, vertical-align:top">Wind Speed</th>
+				    				<th style="width:13%, vertical-align:top">Damage</th>
+				    				<th style="width:40%, vertical-align:top">Description</th>
+				    				<th style="width:25%, vertical-align:top">Example</th>
+				    			</tr>
+				    			<tr>
+				    				<th>EF-0</td>
+				    				<td>65-85 mph</td>
+				    				<td>Light</td>
+				    				<td>Peels surface off some roofs; some damage to gutters or siding; branches broken off trees; shallow-rooted trees pushed over.</td>
+				    				<td style="word-break: break-all"><a href="http://www.srh.noaa.gov/images/mlb/surveys/012210/Viera_CraneCk1.jpg">www.srh.noaa.gov/images/mlb/surveys/012210/Viera_CraneCk1.jpg</a><br />
+				    				<a href="http://www.srh.noaa.gov/mlb/?n=012210">www.srh.noaa.gov/mlb/?n=012210</a></td>
+				    			</tr>
+				    			<tr>
+				    				<th>EF-1</td>
+				    				<td>86-110 mph</td>
+				    				<td>Moderate</td>
+				    				<td>Roofs severely stripped; mobile homes overturned or badly damaged; loss of exterior doors; windows and other glass broken.</td>
+				    				<td style="word-break: break-all"><a href="http://www.weather.gov/images/ict/wxstory/2012/may19th/damage/placemark1.jpg"></a>www.weather.gov/images/ict/wxstory/2012/may19th/damage/placemark1.jpg</a><br /><a href="http://www.weather.gov/ict/event_05192012">www.weather.gov/ict/event_05192012</a></td>
+				    			</tr>
+				    			<tr>
+				    				<th>EF-2</td>
+				    				<td>111-135 mph</td>
+				    				<td>Considerable</td>
+				    				<td>Roofs torn off well-constructed houses; foundations of frame homes shifted; mobile homes completely destroyed; large trees snapped or uprooted; light-object missiles generated; cars lifted off ground.</td>
+				    				<td style="word-break: break-all"><a href="https://commons.wikimedia.org/wiki/File:EF2_tornado_damage_example_%282%29.jpg">commons.wikimedia.org/wiki/File:EF2_tornado_damage_example_%282%29.jpg</a></td>
+				    			</tr>
+				    			<tr>
+				    				<th>EF-3</td>
+				    				<td>136-165 mph</td>
+				    				<td>Severe</td>
+				    				<td >Entire stories of well-constructed houses destroyed; severe damage to large buildings; trains overturned; trees debarked; heavy cars lifted off the ground and thrown; structures with weak foundations blown away.</td>
+				    				<td style="word-break: break-all"><a href="http://www.srh.noaa.gov/images/bmx/significant_events/2012/012312/Center%20Point/2.JPG">www.srh.noaa.gov/images/bmx/significant_events/2012/012312/Center%20Point/2.JPG</a><br /><a href="http://www.srh.noaa.gov/bmx/?n=event_01232012centerpoint">www.srh.noaa.gov/bmx/?n=event_01232012centerpoint</a></td>
+				    			</tr>
+				    			<tr>
+				    				<th>EF-4</td>
+				    				<td>166-200 mph</td>
+				    				<td>Devastating</td>
+				    				<td>Well-constructed whole frame houses completely leveled; cars thrown and small missiles generated.</td>
+				    				<td style="word-break: break-all"><a href="https://en.wikipedia.org/wiki/November_17,_2013_tornado_outbreak#/media/File:Photograph_showing_the_damage_to_houses_and_trees_in_Washington_following_the_11-17-2013_tornado.jpg">en.wikipedia.org/wiki/November_17,_2013_tornado_outbreak#/media/File:Photograph_showing_the_damage_to_houses_and_trees_in_Washington_following_the_11-17-2013_tornado.jpg</a></td>
+				    			</tr>
+				    			<tr>
+				    				<th>EF-5</td>
+				    				<td>&gt;200 mph</td>
+				    				<td>Incredible</td>
+				    				<td>Strong frame houses leveled off foundations and swept away; automobile-sized missiles fly through the air in excess of 100 yards; high-rise buildings have significant structural deformation</td>
+				    				<td style="word-break: break-all"><a href="https://en.wikipedia.org/wiki/2013_Moore_tornado#/media/File:Aerial_view_of_2013_Moore_tornado_damage.jpg">en.wikipedia.org/wiki/2013_Moore_tornado#/media/File:Aerial_view_of_2013_Moore_tornado_damage.jpg</a></td>
+				    			</tr>
+				    		</table>
+				    		<p><a href="http://www.wunderground.com/resources/severe/fujita_scale.asp?MR=1
+">www.wunderground.com/resources/severe/fujita_scale.asp?MR=1</a>
+</p>
+				    		<p>The people with the highest mortality risk from tornadoes include occupants of exterior rooms with windows, those unaware of tornado alerts, elderly with mobility constraints, and occupants of mobile homes.  Nationally, about 40% of all people killed by tornadoes die in mobile homes[Sutter, Daniel, and Kevin M. Simmons. "Tornado fatalities and mobile homes in the United States." Natural hazards 53.1 (2010): 125-137]. Due to advancements in radar detection, warning time, tornado awareness, and building construction, mortality from tornadoes has fallen over the past century despite significant growth in population and property in tornado-prone areas.
+				    		</p>
+				    		<h4>Tornados and Climate Change</h4>
+				    		<p>The effect of climate change on tornado frequency and intensity is unclear, but it is an active area of research.  Current understanding suggests that climate change may have divergent effects on the prerequisites for tornado formation:  atmospheric instability and wind shear.  A warming climate is expected to increase the temperature and humidity of southerly winds from the Gulf of Mexico, which would increase atmospheric instability.  However, climate change is also expected to lead to a weakening of the jet stream, which would reduce wind shear and rotation.  Meteorological records over the past half-century indicate no increase in the frequency of damaging tornadoes.  If this trend continues, any future increases in tornado damage will be more attributable to population growth and land use change than climate change.</p>
+				    		<p>
+					    		<a href="https://www.ncdc.noaa.gov/climate-information/extreme-events/us-tornado-climatology/trends" target="_blank"><img class="aligncenter spaceleft" src="<?php echo resource_url('image/PWM/hazards/tornado/EF1-EF5.png');?>"></a>
+				    		</p>
+
+				    	</div>
 					</div>
-					<div id="tabs-3">
+
+
+
+<!--					<div id="tabs-3">
 						<h3>Extreme Winds</h3>
 				    	<div class="spaceleft row"></div>
 				    </div>
